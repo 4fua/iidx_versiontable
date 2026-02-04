@@ -49,6 +49,7 @@
         .filter-group { display: flex; flex-wrap: wrap; gap: 5px; font-size: 13px; }
         .checkbox-wrapper { cursor: pointer; display: inline-flex; align-items: center; background: #eee; padding: 2px 8px; border-radius: 4px; }
         .checkbox-wrapper:hover { background: #ddd; }
+        .checkbox-wrapper input { margin-right: 5px; }
 
         /* トグルスイッチ */
         .toggle-wrapper { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: bold; }
@@ -68,9 +69,9 @@
         }
         .ver-title { font-weight: bold; }
         .ver-badges { font-size: 0.8em; }
-        .status-badge { padding: 2px 6px; border-radius: 2px; font-weight: bold; color: #333; background: #eee; }
+        .status-badge { padding: 2px 6px; border-radius: 2px; font-weight: bold; color: #333; background: #eee; margin-left: 4px;}
 
-        /* グリッド */
+        /* グリッド: 隙間(gap)を1pxにして、背景色(#999)を見せることで罫線にする */
         .song-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
@@ -88,6 +89,7 @@
             justify-content: space-between;
             font-size: 12px;
             color: var(--text-dark);
+            background: white; /* デフォルト */
         }
 
         .song-title { font-weight: bold; margin-bottom: 4px; line-height: 1.25; }
@@ -104,6 +106,7 @@
         .lamp-HARD_CLEAR      { background-color: var(--bg-hard); color: white; }
         .lamp-HARD_CLEAR .mark-l { color: #ffcccc; }
         .lamp-HARD_CLEAR .mark-h { color: #ffffcc; }
+
         .lamp-CLEAR           { background-color: var(--bg-clear); }
         .lamp-EASY_CLEAR      { background-color: var(--bg-easy); }
         .lamp-ASSIST_CLEAR    { background-color: var(--bg-assist); }
@@ -186,11 +189,19 @@
             "NO PLAY": 0
         };
 
+        // この順序リストを使って確実にチェックボックスを生成します
+        const TIER_ORDER = [
+            "地力S+", "個人差S+", "地力S", "個人差S", 
+            "地力A+", "個人差A+", "地力A", "個人差A", 
+            "地力B+", "個人差B+", "地力B", "個人差B", 
+            "地力C", "個人差C", "地力D", "個人差D",
+            "地力E", "個人差E", "地力F", "個人差F"
+        ];
+
         let masterData = [];
         let songOriginVer = {};
         let userLamps = {};
-        let allTiers = new Set();
-        let activeFilters = new Set();
+        let availableTiers = new Set();
 
         window.onload = async function() {
             try {
@@ -198,40 +209,49 @@
                 if (!response.ok) throw new Error("Master data not found");
                 masterData = await response.json();
                 
+                // データに含まれるTierを収集
                 masterData.forEach(d => {
-                    // Tierを収集 (ソートせずに、出てきた順に格納)
-                    if(d.tier && d.tier !== '-') allTiers.add(d.tier);
-                    
+                    const t = d.tier || "-";
+                    availableTiers.add(t);
+
                     const v = d.ver || d.ver_song || 99;
                     if (d.type === 'ANOTHER') {
                         songOriginVer[d.title] = v;
                     }
                 });
-                
-                const filterContainer = document.getElementById('tier-filters');
-                
-                // ソート処理を削除し、そのままループで生成
-                // (Setの挿入順 = JSONの出現順 = おそらくHTMLの記述順になるはず)
-                allTiers.forEach(tier => {
-                    activeFilters.add(tier);
-                    const label = document.createElement('label');
-                    label.className = 'checkbox-wrapper';
-                    label.innerHTML = `<input type="checkbox" value="${tier}" checked onchange="updateDisplay()"> ${tier}`;
-                    filterContainer.appendChild(label);
-                });
 
-                // その他
-                const unknownLabel = document.createElement('label');
-                unknownLabel.className = 'checkbox-wrapper';
-                unknownLabel.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
-                filterContainer.appendChild(unknownLabel);
-                activeFilters.add("-");
+                initFilters(); // フィルタ生成を実行
 
             } catch (e) {
                 alert("マスターデータの読み込みに失敗しました。\n" + e);
-                console.error(e);
             }
         };
+
+        function initFilters() {
+            const filterContainer = document.getElementById('tier-filters');
+            filterContainer.innerHTML = "";
+
+            // 1. 定義順(TIER_ORDER)にあるものを先に生成
+            TIER_ORDER.forEach(tier => {
+                // データ内にこのTierが存在する場合のみ表示
+                if (availableTiers.has(tier)) {
+                    createCheckbox(filterContainer, tier);
+                    availableTiers.delete(tier); // 処理済みとして削除
+                }
+            });
+
+            // 2. 定義リストに無かった残り（"未定"や"-"など）を生成
+            availableTiers.forEach(tier => {
+                createCheckbox(filterContainer, tier);
+            });
+        }
+
+        function createCheckbox(container, val) {
+            const label = document.createElement('label');
+            label.className = 'checkbox-wrapper';
+            label.innerHTML = `<input type="checkbox" value="${val}" checked onchange="updateDisplay()"> ${val}`;
+            container.appendChild(label);
+        }
 
         async function processData() {
             const fileInput = document.getElementById('csvFile');
@@ -250,7 +270,7 @@
                 parseUserCSV(csvContent);
                 document.getElementById('page-input').classList.remove('active');
                 document.getElementById('page-main').classList.add('active');
-                updateDisplay();
+                updateDisplay(); // 画面更新
             } catch(e) {
                 alert("エラー: " + e);
             }
@@ -270,6 +290,8 @@
             const rows = text.split(/\r\n|\n/);
             let headerIdx = -1;
             let colMap = {};
+            
+            // ヘッダー行を探す
             for(let i=0; i<rows.length; i++) {
                 if (rows[i].includes("タイトル")) {
                     headerIdx = i;
@@ -284,10 +306,12 @@
                 const row = parseCSVLine(rows[i]);
                 if (!row || row.length < 2) continue;
                 const title = row[colMap["タイトル"]];
+                
+                // CSVのカラム名が正しいか確認しながら取得
                 userLamps[title] = {
-                    ANOTHER: row[colMap["ANOTHER クリアタイプ"]] || "NO PLAY",
-                    LEGGENDARIA: row[colMap["LEGGENDARIA クリアタイプ"]] || "NO PLAY",
-                    HYPER: row[colMap["HYPER クリアタイプ"]] || "NO PLAY"
+                    ANOTHER: colMap["ANOTHER クリアタイプ"] ? row[colMap["ANOTHER クリアタイプ"]] : "NO PLAY",
+                    LEGGENDARIA: colMap["LEGGENDARIA クリアタイプ"] ? row[colMap["LEGGENDARIA クリアタイプ"]] : "NO PLAY",
+                    HYPER: colMap["HYPER クリアタイプ"] ? row[colMap["HYPER クリアタイプ"]] : "NO PLAY"
                 };
             }
         }
@@ -306,18 +330,23 @@
         }
 
         function updateDisplay() {
-            activeFilters.clear();
-            document.querySelectorAll('#tier-filters input:checked').forEach(cb => activeFilters.add(cb.value));
+            // 現在チェックされているフィルタを取得
+            const checkedBoxes = document.querySelectorAll('#tier-filters input:checked');
+            const activeFilters = new Set();
+            checkedBoxes.forEach(cb => activeFilters.add(cb.value));
+
             const showChartVer = document.getElementById('verToggle').checked;
             const container = document.getElementById('table-container');
             container.innerHTML = "";
 
+            // データをバージョンごとにグループ化
             const verGroups = {};
             for(let i=1; i<=33; i++) verGroups[i] = [];
             verGroups[99] = [];
 
             masterData.forEach(song => {
                 const songTier = song.tier || "-";
+                // フィルタに該当しないならスキップ
                 if (!activeFilters.has(songTier)) return;
 
                 let myLamp = "NO PLAY";
@@ -326,27 +355,33 @@
                     else if (song.type === "LEGGENDARIA") myLamp = userLamps[song.title].LEGGENDARIA;
                     else if (song.type === "HYPER") myLamp = userLamps[song.title].HYPER;
                 }
-                
+                if (!myLamp) myLamp = "NO PLAY"; // 安全策
+
                 let currentVer = song.ver_chart || song.ver || song.ver_song || 99;
+                
+                // 「楽曲初出」モードのときの特別処理（LEGGENDARIAなど）
                 if (!showChartVer && song.type === 'LEGGENDARIA') {
                     if (songOriginVer[song.title]) currentVer = songOriginVer[song.title];
                     else if(song.ver_song) currentVer = song.ver_song;
                 }
+                
                 if (!verGroups[currentVer]) verGroups[currentVer] = [];
                 verGroups[currentVer].push({ ...song, myLamp: myLamp });
             });
 
-            // バージョン番号順に表示
+            // バージョン順に描画
             Object.keys(verGroups).sort((a,b) => Number(a) - Number(b)).forEach(verId => {
                 const songs = verGroups[verId];
                 if (songs.length === 0) return;
 
-                // ソートロジックを単純化: タイトル順のみ
+                // 楽曲名順にソート (Tier順ソートはバグ回避のため一旦廃止し、単純な名前順にする)
                 songs.sort((a, b) => a.title.localeCompare(b.title));
 
                 const section = document.createElement('div');
                 section.className = 'ver-section';
-                const badgesHtml = generateBadges(songs);
+                
+                const badgesHtml = generateBadges(songs, activeFilters);
+
                 section.innerHTML = `
                     <div class="ver-header">
                         <span class="ver-title">${VER_NAME[verId] || 'Version '+verId}</span>
@@ -354,9 +389,12 @@
                     </div>
                     <div class="song-grid"></div>
                 `;
+                
                 const grid = section.querySelector('.song-grid');
                 songs.forEach(song => {
-                    const lampClean = (song.myLamp || "NO PLAY").replace(/ /g, '_');
+                    // CSSクラス用に安全な文字列に変換
+                    const lampClean = (song.myLamp).replace(/ /g, '_');
+                    
                     let typeSuffix = "";
                     if (song.type === 'LEGGENDARIA') typeSuffix = '<span class="type-mark mark-l">L</span>';
                     else if (song.type === 'HYPER') typeSuffix = '<span class="type-mark mark-h">H</span>';
@@ -366,7 +404,7 @@
                     box.innerHTML = `
                         <div class="song-title">${song.title}${typeSuffix}</div>
                         <div class="song-meta">
-                            <span class="tier-label">${song.tier}</span>
+                            <span class="tier-label">${song.tier || "-"}</span>
                         </div>
                     `;
                     grid.appendChild(box);
@@ -375,25 +413,33 @@
             });
         }
 
-        function generateBadges(songs) {
+        function generateBadges(songs, activeFilters) {
+            if (songs.length === 0) return "";
+            
             let minPriority = 99;
-            let isAllSelected = (activeFilters.size >= allTiers.size);
             songs.forEach(s => {
-                const p = LAMP_PRIORITY[s.myLamp] || 0;
+                const p = LAMP_PRIORITY[s.myLamp] !== undefined ? LAMP_PRIORITY[s.myLamp] : 0;
                 if (p < minPriority) minPriority = p;
             });
+
             let text = "", cssClass = "";
             if (minPriority >= 7) { text = "FC"; cssClass = "badge-fc"; }
             else if (minPriority >= 6) { text = "EXH"; cssClass = "badge-exh"; }
             else if (minPriority >= 5) { text = "HARD"; cssClass = "badge-hard"; }
             else if (minPriority >= 4) { text = "CLEAR"; cssClass = "badge-normal"; }
             else if (minPriority >= 3) { text = "EASY"; cssClass = "badge-easy"; }
-            else return "";
+            else return ""; // Failed以下はバッジなし
 
-            if (!isAllSelected) {
+            // フィルタが一部だけ選択されている場合の注記
+            // (全Tier数と比較するのは難しいので、簡易的に個数チェック)
+            const allBoxes = document.querySelectorAll('#tier-filters input');
+            if (activeFilters.size < allBoxes.length) {
                 const selected = Array.from(activeFilters).filter(f => f !== '-');
-                text += selected.length <= 3 ? ` (${selected.join(',')})` : ` (${selected.length})`;
+                if(selected.length > 0) {
+                   text += selected.length <= 3 ? ` (${selected.join(',')})` : ` (${selected.length})`;
+                }
             }
+
             return `<span class="status-badge ${cssClass}">${text}</span>`;
         }
 
