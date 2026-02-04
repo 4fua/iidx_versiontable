@@ -19,9 +19,6 @@
         .tier-c  { background-color: #ccffff; color: #0000cc; border: 1px solid #0000cc; }
         .tier-d  { background-color: #e0ccff; color: #6600cc; border: 1px solid #6600cc; }
         .tier-f  { background-color: #eeeeee; color: #666666; border: 1px solid #666666; }
-
-        .type-leg { color: #a000a0; font-weight: bold; }
-        .type-ano { color: #d00000; }
     </style>
 </head>
 <body>
@@ -73,19 +70,20 @@
                         { 
                             data: 'title', 
                             title: 'Title',
-                            width: '55%' 
+                            width: '55%',
+                            render: function(data, type, row) {
+                                // LEGGENDARIAの場合、末尾に [L] を付与
+                                if (row.type === 'LEGGENDARIA') {
+                                    return data + ' [L]';
+                                }
+                                return data;
+                            }
                         },
                         { 
                             data: 'type', 
                             title: 'Type',
-                            width: '20%',
-                            render: function(data) {
-                                if (data === 'LEGGENDARIA') {
-                                    return '<span class="type-leg">LEGGENDARIA</span>';
-                                } else {
-                                    return '<span class="type-ano">ANOTHER</span>';
-                                }
-                            }
+                            width: '20%'
+                            // 色分け処理を削除し、テキストのみ表示
                         },
                         { 
                             data: 'tier', 
