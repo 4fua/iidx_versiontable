@@ -30,7 +30,7 @@
         .btn:hover { background: #555; }
         .file-input-wrapper { border: 2px dashed #ccc; padding: 20px; margin-bottom: 20px; background: #fafafa; border-radius: 8px; }
 
-        /* コントロールバー (スマホ対応版) */
+        /* コントロールバー */
         .controls { 
             background: white; 
             position: sticky; 
@@ -38,10 +38,9 @@
             z-index: 1000; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
             border-bottom: 1px solid #ddd; 
-            margin: -15px -15px 15px -15px; /* 親のpaddingを打ち消して全幅にする */
+            margin: -15px -15px 15px -15px;
         }
         
-        /* 常に表示されるヘッダー部分 */
         .control-header {
             display: flex;
             justify-content: space-between;
@@ -52,9 +51,8 @@
             background: #fff;
         }
 
-        /* 折りたたみメニュー部分 */
         .control-body {
-            display: none; /* デフォルト非表示 */
+            display: none;
             padding: 15px;
             background: #f9f9f9;
             border-top: 1px solid #eee;
@@ -94,10 +92,9 @@
         .ver-title { font-weight: bold; font-size: 1em; }
         .status-badge { padding: 3px 6px; border-radius: 4px; font-weight: bold; color: #333; background: #eee; margin-left: 4px; font-size: 0.75em; white-space: nowrap; }
 
-        /* グリッドレイアウト (スマホ最適化) */
+        /* グリッドレイアウト */
         .song-grid { 
             display: grid; 
-            /* スマホで3列くらいになるように100pxに縮小 */
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
             gap: 1px; 
             background-color: #ccc; 
@@ -111,9 +108,20 @@
             font-size: 11px; color: var(--text-dark); 
             background: white; 
         }
-        .song-title { font-weight: bold; margin-bottom: 2px; line-height: 1.25; word-break: break-all; font-size: 11px; }
-        .song-meta { display: flex; justify-content: space-between; align-items: flex-end; opacity: 0.8; margin-top: auto; }
-        .tier-label { font-size: 9px; border: 1px solid rgba(0,0,0,0.2); padding: 0px 3px; border-radius: 2px; background: rgba(255,255,255,0.8); }
+        .song-title { font-weight: bold; margin-bottom: 4px; line-height: 1.25; word-break: break-all; font-size: 11px; }
+        
+        /* ★修正: Tierラベルを見やすく調整 */
+        .song-meta { display: flex; justify-content: space-between; align-items: flex-end; opacity: 1.0; margin-top: auto; }
+        .tier-label { 
+            font-size: 11px;          /* 文字サイズUP */
+            font-weight: bold;        /* 太字 */
+            color: #000;              /* 真っ黒 */
+            border: 1px solid #666;   /* 枠線を濃く */
+            padding: 2px 5px;         /* 余白調整 */
+            border-radius: 4px; 
+            background: #ffffff;      /* 完全な白背景 */
+            white-space: nowrap;      /* 改行禁止 */
+        }
         
         .mark-l { color: #d00; font-weight: bold; margin-left: 2px; } 
         .mark-h { color: #a67c00; font-weight: bold; margin-left: 2px; }
@@ -130,14 +138,12 @@
         .lamp-FAILED          { background-color: var(--bg-failed); color: white; }
         .lamp-NO_PLAY         { background-color: var(--bg-noplay); }
 
-        /* バッジ色定義 */
         .badge-fc { background: var(--bg-fc); }
         .badge-exh { background: var(--bg-exh); }
         .badge-hard { background: var(--bg-hard); color: white; }
         .badge-normal { background: var(--bg-clear); }
         .badge-easy { background: var(--bg-easy); }
 
-        /* スマホ向け微調整 */
         @media (max-width: 480px) {
             .input-container { padding: 15px; margin: 10px auto; }
             h1 { font-size: 1.5em; text-align: center; margin: 10px 0; }
@@ -231,7 +237,6 @@
         let songOriginVer = {}; 
         let availableTiers = new Set();
 
-        // メニュー開閉
         function toggleMenu() {
             const body = document.getElementById('control-body');
             const btn = document.getElementById('menu-btn');
@@ -243,7 +248,6 @@
             }
         }
 
-        // 正規化関数
         function getMatchingKey(title) {
             if (!title) return "";
             return title.replace(/[\\"]/g, '');
