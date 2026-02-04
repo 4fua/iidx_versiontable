@@ -3,120 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIDX Score Manager</title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <title>IIDX ☆12 Tier Viewer</title>
     <style>
-        body { font-family: "Helvetica Neue", Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
-        .container { max-width: 1200px; margin: 0 auto; background: #fff; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        table { width: 100% !important; }
+        /* --- デザイン設定（塗りつぶし表形式） --- */
+        :root {
+            --bg-fc: #ffa500;     /* Orange */
+            --bg-exh: #ffd700;    /* Gold */
+            --bg-hard: #ff6347;   /* Red */
+            --bg-clear: #87ceeb;  /* Blue */
+            --bg-easy: #98fb98;   /* Green */
+            --bg-assist: #ffc0cb; /* Pink */
+            --bg-failed: #c0c0c0; /* Gray */
+            --bg-noplay: #ffffff; /* White */
+            --text-dark: #222;
+        }
+
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+        .page { display: none; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .active { display: block; }
+
+        /* 入力画面 */
+        .input-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; max-width: 600px; margin: 40px auto; }
+        textarea { width: 100%; height: 120px; margin-top: 10px; padding: 10px; border: 1px solid #ccc; }
+        .btn { background: #333; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 15px; }
+        .file-input-wrapper { border: 2px dashed #ccc; padding: 20px; margin-bottom: 20px; }
+
+        /* コントロール */
+        .controls { background: white; padding: 15px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+        .control-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap:10px; }
+        .filter-group { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; }
+        .checkbox-wrapper { cursor: pointer; display: inline-flex; align-items: center; background: #eee; padding: 2px 8px; border-radius: 4px; }
+        .checkbox-wrapper:hover { background: #ddd; }
+        .checkbox-wrapper input { margin-right: 5px; }
+        .small-btn { padding: 4px 10px; cursor: pointer; }
+
+        /* トグルスイッチ */
+        .toggle-wrapper { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: bold; background: #f9f9f9; padding: 5px 10px; border-radius: 4px; border: 1px solid #eee; }
+        .switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .3s; border-radius: 20px; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
+        input:checked + .slider { background-color: #2196F3; }
+        input:checked + .slider:before { transform: translateX(18px); }
+
+        /* バージョン枠 */
+        .ver-section { margin-bottom: 30px; border: 1px solid #999; background: white; }
+        .ver-header { background: #333; color: white; padding: 8px 15px; display: flex; justify-content: space-between; align-items: center; }
+        .ver-title { font-weight: bold; }
+        .status-badge { padding: 2px 6px; border-radius: 2px; font-weight: bold; color: #333; background: #eee; margin-left: 4px; font-size: 0.8em; }
+
+        /* グリッド (隙間1pxで罫線を表現) */
+        .song-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+            gap: 1px; 
+            background-color: #999; 
+            border-top: 1px solid #999; 
+        }
+
+        /* 楽曲セル */
+        .song-box { 
+            padding: 8px; min-height: 50px; 
+            display: flex; flex-direction: column; justify-content: space-between; 
+            font-size: 12px; color: var(--text-dark); 
+            background: white; /* デフォルト */
+        }
+        .song-title { font-weight: bold; margin-bottom: 4px; line-height: 1.25; }
+        .song-meta { display: flex; justify-content: space-between; align-items: flex-end; opacity: 0.8; }
+        .tier-label { font-size: 10px; border: 1px solid rgba(0,0,0,0.3); padding: 0 4px; border-radius: 2px; background: rgba(255,255,255,0.5); }
         
-        /* Tier Decoration */
-        .tier-badge { padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 0.9em; display: inline-block; width: 60px; text-align: center; }
-        .tier-sp { background-color: #ffcccc; color: #cc0000; border: 1px solid #cc0000; }
-        .tier-s  { background-color: #ffe0cc; color: #cc5200; border: 1px solid #cc5200; }
-        .tier-a  { background-color: #ffffcc; color: #aaaa00; border: 1px solid #aaaa00; }
-        .tier-b  { background-color: #ccffcc; color: #008800; border: 1px solid #008800; }
-        .tier-c  { background-color: #ccffff; color: #0000cc; border: 1px solid #0000cc; }
-        .tier-d  { background-color: #e0ccff; color: #6600cc; border: 1px solid #6600cc; }
-        .tier-f  { background-color: #eeeeee; color: #666666; border: 1px solid #666666; }
+        .mark-l { color: #d00; font-weight: bold; margin-left:2px; } 
+        .mark-h { color: #a67c00; font-weight: bold; margin-left:2px; }
+
+        /* ランプ背景色 */
+        .lamp-FULLCOMBO_CLEAR { background-color: var(--bg-fc); }
+        .lamp-EX_HARD_CLEAR   { background-color: var(--bg-exh); }
+        .lamp-HARD_CLEAR      { background-color: var(--bg-hard); color: white; }
+        .lamp-HARD_CLEAR .mark-l { color: #ffcccc; }
+        .lamp-HARD_CLEAR .mark-h { color: #ffffcc; }
+        .lamp-CLEAR           { background-color: var(--bg-clear); }
+        .lamp-EASY_CLEAR      { background-color: var(--bg-easy); }
+        .lamp-ASSIST_CLEAR    { background-color: var(--bg-assist); }
+        .lamp-FAILED          { background-color: var(--bg-failed); color: white; }
+        .lamp-NO_PLAY         { background-color: var(--bg-noplay); }
+
+        /* バッジ色 */
+        .badge-fc { background: var(--bg-fc); }
+        .badge-exh { background: var(--bg-exh); }
+        .badge-hard { background: var(--bg-hard); color: white; }
+        .badge-normal { background: var(--bg-clear); }
+        .badge-easy { background: var(--bg-easy); }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>IIDX Difficulty Table (Level 12)</h2>
-    <table id="scoreTable" class="display compact" style="width:100%">
-        <thead>
-            <tr>
-                <th>Ver</th>
-                <th>Title</th>
-                <th>Type</th>
-                <th>Tier</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
+    <div id="page-input" class="page active">
+        <h1>IIDX ☆12 Tier Viewer</h1>
+        <div class="input-container">
+            <div class="file-input-wrapper">
+                <h3>CSVファイルを選択</h3>
+                <input type="file" id="csvFile" accept=".csv">
+            </div>
+            <div>- OR -</div>
+            <textarea id="csvText" placeholder="CSV貼り付け (スマホ用)"></textarea>
+            <button class="btn" onclick="processData()">読み込んで表示</button>
+        </div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <div id="page-main" class="page">
+        <div class="controls">
+            <div class="control-row">
+                <button class="small-btn" onclick="location.reload()">← 戻る</button>
+                
+                <div class="toggle-wrapper">
+                    <span>楽曲初出</span>
+                    <label class="switch">
+                        <input type="checkbox" id="verToggle" onchange="updateDisplay()" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>譜面初出</span>
+                </div>
+            </div>
 
-<script>
-    $(document).ready(function() {
-        // 修正箇所: dataフォルダ内のファイルを指定
-        fetch('data/master_data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("HTTP Status: " + response.status);
+            <div class="filter-group">
+                <span style="font-weight:bold;">Tier:</span>
+                <div id="tier-filters"></div>
+            </div>
+            <div style="margin-top:10px;">
+                <button class="small-btn" onclick="toggleAllFilters(true)">全選択</button>
+                <button class="small-btn" onclick="toggleAllFilters(false)">全解除</button>
+            </div>
+        </div>
+        <div id="table-container"></div>
+    </div>
+
+    <script>
+        // 設定
+        const MASTER_JSON_URL = './data/master_data.json';
+        const VER_NAME = {
+            1: "1st&substream", 2: "2nd style", 3: "3rd style", 4: "4th style", 5: "5th style",
+            6: "6th style", 7: "7th style", 8: "8th style", 9: "9th style", 10: "10th style",
+            11: "IIDX RED", 12: "HAPPY SKY", 13: "DistorteD", 14: "GOLD", 15: "DJ TROOPERS",
+            16: "EMPRESS", 17: "SIRIUS", 18: "Resort Anthem", 19: "Lincle", 20: "tricoro",
+            21: "SPADA", 22: "PENDUAL", 23: "copula", 24: "SINOBUZ", 25: "CANNON BALLERS",
+            26: "Rootage", 27: "HEROIC VERSE", 28: "BISTROVER", 29: "CastHour", 30: "RESIDENT",
+            31: "EPOLIS", 32: "Pinky Crush", 33: "Sparkle Shower"
+        };
+        const LAMP_PRIORITY = {
+            "FULLCOMBO CLEAR": 7, "EX HARD CLEAR": 6, "HARD CLEAR": 5,
+            "CLEAR": 4, "EASY CLEAR": 3, "ASSIST CLEAR": 2, "FAILED": 1, "NO PLAY": 0
+        };
+        
+        // ソート順定義 (難しい順)
+        const TIER_ORDER = [
+            "地力S+", "個人差S+", "地力S", "個人差S", 
+            "地力A+", "個人差A+", "地力A", "個人差A", 
+            "地力B+", "個人差B+", "地力B", "個人差B", 
+            "地力C", "個人差C", "地力D", "個人差D",
+            "地力E", "個人差E", "地力F", "個人差F"
+        ];
+
+        // グローバル変数
+        let masterData = [];
+        let userLamps = {};
+        let songOriginVer = {}; // 曲の初出バージョン (ANOTHER準拠)
+        let availableTiers = new Set();
+
+        window.onload = async function() {
+            try {
+                const res = await fetch(MASTER_JSON_URL);
+                if (!res.ok) throw new Error("JSON読み込み失敗: " + res.status);
+                masterData = await res.json();
+                
+                // データ解析: Tier収集 と 曲の初出バージョンの辞書作成
+                masterData.forEach(d => {
+                    // ★修正: バックスラッシュ除去 (灰燼対策)
+                    if (d.title) d.title = d.title.replace(/\\/g, '');
+
+                    if (d.tier && d.tier !== '-') availableTiers.add(d.tier);
+                    
+                    // ANOTHER譜面のバージョンを「曲の初出」として記録
+                    const v = d.ver_song || d.ver || 99;
+                    if (d.type === 'ANOTHER') {
+                        songOriginVer[d.title] = v;
+                    }
+                });
+
+                initFilters();
+
+            } catch (e) {
+                alert("初期化エラー: " + e + "\n./data/master_data.json が配置されているか確認してください。");
+            }
+        };
+
+        function initFilters() {
+            const container = document.getElementById('tier-filters');
+            container.innerHTML = "";
+
+            // 定義順(TIER_ORDER)にチェックボックスを生成
+            TIER_ORDER.forEach(tier => {
+                if (availableTiers.has(tier)) {
+                    createCheckbox(container, tier);
+                    availableTiers.delete(tier);
                 }
-                return response.json();
-            })
-            .then(data => {
-                // データ修正処理: エスケープ文字(\)の除去
-                data.forEach(song => {
-                    if (song.title) {
-                        song.title = song.title.replace(/\\/g, '');
-                    }
-                });
-
-                $('#scoreTable').DataTable({
-                    data: data,
-                    columns: [
-                        { 
-                            data: 'ver', 
-                            title: 'Ver', 
-                            width: '5%',
-                            className: 'dt-center'
-                        },
-                        { 
-                            data: 'title', 
-                            title: 'Title',
-                            width: '55%',
-                            render: function(data, type, row) {
-                                // LEGGENDARIAの場合、末尾に [L] を付与
-                                if (row.type === 'LEGGENDARIA') {
-                                    return data + ' [L]';
-                                }
-                                return data;
-                            }
-                        },
-                        { 
-                            data: 'type', 
-                            title: 'Type',
-                            width: '20%'
-                        },
-                        { 
-                            data: 'tier', 
-                            title: 'Tier',
-                            width: '20%',
-                            className: 'dt-center',
-                            render: function(data) {
-                                if (!data || data === '-') return '-';
-                                let cls = 'tier-f';
-                                const d = data.toUpperCase();
-                                if (d.includes('S+')) cls = 'tier-sp';
-                                else if (d.includes('S')) cls = 'tier-s';
-                                else if (d.includes('A')) cls = 'tier-a';
-                                else if (d.includes('B')) cls = 'tier-b';
-                                else if (d.includes('C')) cls = 'tier-c';
-                                else if (d.includes('D')) cls = 'tier-d';
-                                return `<span class="tier-badge ${cls}">${data}</span>`;
-                            }
-                        }
-                    ],
-                    pageLength: 100,
-                    order: [[3, 'asc'], [0, 'asc']],
-                    language: {
-                        url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json"
-                    }
-                });
-            })
-            .catch(err => {
-                console.error('JSON Load Error:', err);
-                alert('データの読み込みに失敗しました。パス(data/master_data.json)を確認してください。');
             });
-    });
-</script>
+            // 定義外のTierがあれば末尾に追加
+            availableTiers.forEach(tier => {
+                createCheckbox(container, tier);
+            });
+            // その他
+            const label = document.createElement('label');
+            label.className = 'checkbox-wrapper';
+            label.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
+            container.appendChild(label);
+        }
 
+        function createCheckbox(container, val) {
+            const label = document.createElement('label');
+            label.className = 'checkbox-wrapper';
+            label.innerHTML = `<input type="checkbox" value="${val}" checked onchange="updateDisplay()"> ${val}`;
+            container.appendChild(label);
+        }
+
+        async function processData() {
+            const fileInput = document.getElementById('csvFile');
+            const textInput = document.getElementById('csvText');
+            let content = "";
+
+            if (fileInput.files.length > 0) {
+                content = await readFile(fileInput.files[0]);
+            } else if (textInput.value.trim()) {
+                content = textInput.value;
+            } else {
+                alert("CSVを選択してください");
+                return;
+            }
+
+            try {
+                parseUserCSV(content);
+                document.getElementById('page-input').classList.remove('active');
+                document.getElementById('page-main').classList.add('active');
+                updateDisplay();
+            } catch (e) {
+                alert("CSV解析エラー: " + e);
+            }
+        }
+
+        function readFile(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = e => resolve(e.target.result);
+                reader.onerror = e => reject(e);
+                reader.readAsText(file, "Shift_JIS");
+            });
+        }
+
+        function parseUserCSV(text) {
+            userLamps = {};
+            const rows = text.split(/\r\n|\n/);
+            let headerIdx = -1, colMap = {};
+
+            for (let i = 0; i < rows.length; i++) {
+                if (rows[i].includes("タイトル")) {
+                    headerIdx = i;
+                    rows[i].split(",").forEach((c, idx) => colMap[c.trim()] = idx);
+                    break;
+                }
+            }
+            if (headerIdx === -1) throw new Error("ヘッダーが見つかりません");
+
+            for (let i = headerIdx + 1; i < rows.length; i++) {
+                const row = parseCSVLine(rows[i]);
+                if (!row || row.length < 2) continue;
+                
+                // CSV側のタイトルもバックスラッシュを除去して正規化
+                let title = row[colMap["タイトル"]];
+                if (title) {
+                    title = title.replace(/\\/g, '');
+                    
+                    userLamps[title] = {
+                        ANOTHER: row[colMap["ANOTHER クリアタイプ"]] || "NO PLAY",
+                        LEGGENDARIA: row[colMap["LEGGENDARIA クリアタイプ"]] || "NO PLAY",
+                        HYPER: row[colMap["HYPER クリアタイプ"]] || "NO PLAY"
+                    };
+                }
+            }
+        }
+
+        function parseCSVLine(line) {
+            const res = [];
+            let current = '', inQuote = false;
+            for(let char of line) {
+                if(char === '"') inQuote = !inQuote;
+                else if(char === ',' && !inQuote) { res.push(current); current = ''; }
+                else current += char;
+            }
+            res.push(current);
+            return res;
+        }
+
+        function updateDisplay() {
+            const activeFilters = new Set();
+            document.querySelectorAll('#tier-filters input:checked').forEach(cb => activeFilters.add(cb.value));
+            
+            // トグル状態: ON(true)=譜面初出, OFF(false)=楽曲初出
+            const showChartVer = document.getElementById('verToggle').checked;
+
+            const container = document.getElementById('table-container');
+            container.innerHTML = "";
+
+            const verGroups = {};
+
+            masterData.forEach(song => {
+                const tier = song.tier || "-";
+                if (!activeFilters.has(tier)) return;
+
+                let myLamp = "NO PLAY";
+                if (userLamps[song.title]) {
+                    if (song.type === "ANOTHER") myLamp = userLamps[song.title].ANOTHER;
+                    else if (song.type === "LEGGENDARIA") myLamp = userLamps[song.title].LEGGENDARIA;
+                    else if (song.type === "HYPER") myLamp = userLamps[song.title].HYPER;
+                }
+                if (!myLamp) myLamp = "NO PLAY";
+
+                // --- バージョン判定ロジック ---
+                let targetVer = 99;
+
+                if (showChartVer) {
+                    // ON: 譜面初出 (JSONに ver_chart があれば優先、なければ ver)
+                    targetVer = song.ver_chart || song.ver || 99;
+                } else {
+                    // OFF: 楽曲初出
+                    // LEGGENDARIAの場合は ANOTHER譜面のバージョン(songOriginVer) を参照
+                    if (song.type === 'LEGGENDARIA' && songOriginVer[song.title]) {
+                        targetVer = songOriginVer[song.title];
+                    } else {
+                        // それ以外、または辞書にない場合は ver_song > ver の順で参照
+                        targetVer = song.ver_song || song.ver || 99;
+                    }
+                }
+                
+                if (!verGroups[targetVer]) verGroups[targetVer] = [];
+                verGroups[targetVer].push({ ...song, myLamp: myLamp });
+            });
+
+            // バージョンID順に表示
+            Object.keys(verGroups).sort((a,b) => Number(a) - Number(b)).forEach(verId => {
+                const songs = verGroups[verId];
+                if (songs.length === 0) return;
+
+                // ソート処理: Tier順(難しい順) -> 曲名順
+                songs.sort((a, b) => {
+                    let idxA = TIER_ORDER.indexOf(a.tier);
+                    let idxB = TIER_ORDER.indexOf(b.tier);
+                    if (idxA === -1) idxA = 999;
+                    if (idxB === -1) idxB = 999;
+
+                    if (idxA !== idxB) {
+                        return idxA - idxB; // インデックスが小さい(S+)ほうが先
+                    }
+                    return a.title.localeCompare(b.title);
+                });
+
+                // HTML生成
+                const section = document.createElement('div');
+                section.className = 'ver-section';
+                
+                const badges = generateBadges(songs);
+                const vName = VER_NAME[verId] || `Ver.${verId}`;
+
+                section.innerHTML = `
+                    <div class="ver-header">
+                        <span class="ver-title">${vName}</span>
+                        <div>${badges}</div>
+                    </div>
+                    <div class="song-grid"></div>
+                `;
+                
+                const grid = section.querySelector('.song-grid');
+                songs.forEach(s => {
+                    const lampClean = s.myLamp.replace(/ /g, '_');
+                    let suffix = "";
+                    if (s.type === 'LEGGENDARIA') suffix = '<span class="mark-l">L</span>';
+                    else if (s.type === 'HYPER') suffix = '<span class="mark-h">H</span>';
+
+                    const box = document.createElement('div');
+                    box.className = `song-box lamp-${lampClean}`;
+                    box.innerHTML = `
+                        <div class="song-title">${s.title}${suffix}</div>
+                        <div class="song-meta">
+                            <span class="tier-label">${s.tier || "-"}</span>
+                        </div>
+                    `;
+                    grid.appendChild(box);
+                });
+                container.appendChild(section);
+            });
+        }
+
+        function generateBadges(songs) {
+            let minP = 99;
+            songs.forEach(s => {
+                const p = LAMP_PRIORITY[s.myLamp] !== undefined ? LAMP_PRIORITY[s.myLamp] : 0;
+                if (p < minP) minP = p;
+            });
+            
+            let txt="", cls="";
+            if(minP>=7){ txt="FC"; cls="badge-fc"; }
+            else if(minP>=6){ txt="EXH"; cls="badge-exh"; }
+            else if(minP>=5){ txt="HARD"; cls="badge-hard"; }
+            else if(minP>=4){ txt="CLEAR"; cls="badge-normal"; }
+            else if(minP>=3){ txt="EASY"; cls="badge-easy"; }
+            else return "";
+
+            return `<span class="status-badge ${cls}">${txt}</span>`;
+        }
+
+        function toggleAllFilters(enable) {
+            document.querySelectorAll('#tier-filters input').forEach(cb => cb.checked = enable);
+            updateDisplay();
+        }
+    </script>
 </body>
 </html>
