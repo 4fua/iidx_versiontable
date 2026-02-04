@@ -51,15 +51,6 @@
         .checkbox-wrapper:hover { background: #ddd; }
         .checkbox-wrapper input { margin-right: 5px; }
 
-        /* トグルスイッチ */
-        .toggle-wrapper { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: bold; }
-        .switch { position: relative; display: inline-block; width: 36px; height: 20px; }
-        .switch input { opacity: 0; width: 0; height: 0; }
-        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .3s; border-radius: 20px; }
-        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .3s; border-radius: 50%; }
-        input:checked + .slider { background-color: #2196F3; }
-        input:checked + .slider:before { transform: translateX(16px); }
-
         /* 表レイアウト */
         .ver-section { margin-bottom: 30px; border: 1px solid #999; background: white; }
         
@@ -145,14 +136,7 @@
         <div class="controls">
             <div class="control-row">
                 <button onclick="location.reload()" style="cursor:pointer;">← 戻る</button>
-                <div class="toggle-wrapper">
-                    <span>楽曲初出</span>
-                    <label class="switch">
-                        <input type="checkbox" id="verToggle" onchange="updateDisplay()" checked>
-                        <span class="slider"></span>
-                    </label>
-                    <span>譜面初出</span>
-                </div>
+                <div></div>
             </div>
             <div class="filter-group">
                 <span style="font-weight:bold;">Tier:</span>
@@ -199,7 +183,6 @@
         ];
 
         let masterData = [];
-        let songOriginVer = {};
         let userLamps = {};
         let availableTiers = new Set();
 
@@ -213,14 +196,9 @@
                 masterData.forEach(d => {
                     const t = d.tier || "-";
                     availableTiers.add(t);
-
-                    const v = d.ver || d.ver_song || 99;
-                    if (d.type === 'ANOTHER') {
-                        songOriginVer[d.title] = v;
-                    }
                 });
 
-                initFilters(); // フィルタ生成を実行
+                initFilters();
 
             } catch (e) {
                 alert("マスターデータの読み込みに失敗しました。\n" + e);
@@ -231,16 +209,14 @@
             const filterContainer = document.getElementById('tier-filters');
             filterContainer.innerHTML = "";
 
-            // 1. 定義順(TIER_ORDER)にあるものを先に生成
+            // 定義順に生成 (データにあるものだけ)
             TIER_ORDER.forEach(tier => {
-                // データ内にこのTierが存在する場合のみ表示
                 if (availableTiers.has(tier)) {
                     createCheckbox(filterContainer, tier);
-                    availableTiers.delete(tier); // 処理済みとして削除
+                    availableTiers.delete(tier);
                 }
             });
-
-            // 2. 定義リストに無かった残り（"未定"や"-"など）を生成
+            // 定義外のTierがあれば末尾に追加
             availableTiers.forEach(tier => {
                 createCheckbox(filterContainer, tier);
             });
@@ -270,9 +246,10 @@
                 parseUserCSV(csvContent);
                 document.getElementById('page-input').classList.remove('active');
                 document.getElementById('page-main').classList.add('active');
-                updateDisplay(); // 画面更新
+                updateDisplay();
             } catch(e) {
                 alert("エラー: " + e);
+                console.error(e);
             }
         }
 
@@ -291,7 +268,6 @@
             let headerIdx = -1;
             let colMap = {};
             
-            // ヘッダー行を探す
             for(let i=0; i<rows.length; i++) {
                 if (rows[i].includes("タイトル")) {
                     headerIdx = i;
@@ -307,7 +283,6 @@
                 if (!row || row.length < 2) continue;
                 const title = row[colMap["タイトル"]];
                 
-                // CSVのカラム名が正しいか確認しながら取得
                 userLamps[title] = {
                     ANOTHER: colMap["ANOTHER クリアタイプ"] ? row[colMap["ANOTHER クリアタイプ"]] : "NO PLAY",
                     LEGGENDARIA: colMap["LEGGENDARIA クリアタイプ"] ? row[colMap["LEGGENDARIA クリアタイプ"]] : "NO PLAY",
@@ -330,23 +305,19 @@
         }
 
         function updateDisplay() {
-            // 現在チェックされているフィルタを取得
             const checkedBoxes = document.querySelectorAll('#tier-filters input:checked');
             const activeFilters = new Set();
             checkedBoxes.forEach(cb => activeFilters.add(cb.value));
 
-            const showChartVer = document.getElementById('verToggle').checked;
             const container = document.getElementById('table-container');
             container.innerHTML = "";
 
-            // データをバージョンごとにグループ化
             const verGroups = {};
             for(let i=1; i<=33; i++) verGroups[i] = [];
             verGroups[99] = [];
 
             masterData.forEach(song => {
                 const songTier = song.tier || "-";
-                // フィルタに該当しないならスキップ
                 if (!activeFilters.has(songTier)) return;
 
                 let myLamp = "NO PLAY";
@@ -355,26 +326,22 @@
                     else if (song.type === "LEGGENDARIA") myLamp = userLamps[song.title].LEGGENDARIA;
                     else if (song.type === "HYPER") myLamp = userLamps[song.title].HYPER;
                 }
-                if (!myLamp) myLamp = "NO PLAY"; // 安全策
+                if (!myLamp) myLamp = "NO PLAY";
 
-                let currentVer = song.ver_chart || song.ver || song.ver_song || 99;
-                
-                // 「楽曲初出」モードのときの特別処理（LEGGENDARIAなど）
-                if (!showChartVer && song.type === 'LEGGENDARIA') {
-                    if (songOriginVer[song.title]) currentVer = songOriginVer[song.title];
-                    else if(song.ver_song) currentVer = song.ver_song;
-                }
+                // バージョン取得の安全策: 新旧どのJSONでも動作するように
+                // ver_song (曲初出) > ver (旧形式) > ver_chart (譜面初出) の優先度で取得
+                // ※トグル廃止に伴い「曲のバージョン」を優先して表示します
+                let currentVer = song.ver_song || song.ver || song.ver_chart || 99;
                 
                 if (!verGroups[currentVer]) verGroups[currentVer] = [];
                 verGroups[currentVer].push({ ...song, myLamp: myLamp });
             });
 
-            // バージョン順に描画
             Object.keys(verGroups).sort((a,b) => Number(a) - Number(b)).forEach(verId => {
                 const songs = verGroups[verId];
                 if (songs.length === 0) return;
 
-                // 楽曲名順にソート (Tier順ソートはバグ回避のため一旦廃止し、単純な名前順にする)
+                // タイトル順にソート (安全策)
                 songs.sort((a, b) => a.title.localeCompare(b.title));
 
                 const section = document.createElement('div');
@@ -392,7 +359,6 @@
                 
                 const grid = section.querySelector('.song-grid');
                 songs.forEach(song => {
-                    // CSSクラス用に安全な文字列に変換
                     const lampClean = (song.myLamp).replace(/ /g, '_');
                     
                     let typeSuffix = "";
@@ -428,10 +394,8 @@
             else if (minPriority >= 5) { text = "HARD"; cssClass = "badge-hard"; }
             else if (minPriority >= 4) { text = "CLEAR"; cssClass = "badge-normal"; }
             else if (minPriority >= 3) { text = "EASY"; cssClass = "badge-easy"; }
-            else return ""; // Failed以下はバッジなし
+            else return "";
 
-            // フィルタが一部だけ選択されている場合の注記
-            // (全Tier数と比較するのは難しいので、簡易的に個数チェック)
             const allBoxes = document.querySelectorAll('#tier-filters input');
             if (activeFilters.size < allBoxes.length) {
                 const selected = Array.from(activeFilters).filter(f => f !== '-');
@@ -439,7 +403,6 @@
                    text += selected.length <= 3 ? ` (${selected.join(',')})` : ` (${selected.length})`;
                 }
             }
-
             return `<span class="status-badge ${cssClass}">${text}</span>`;
         }
 
