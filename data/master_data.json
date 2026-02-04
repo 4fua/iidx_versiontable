@@ -1,1 +1,4090 @@
-[]
+[
+  {
+    "title": "V",
+    "ver": 5,
+    "ver_song": 5,
+    "ver_chart": 5,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Colors (radio edit)",
+    "ver": 6,
+    "ver_song": 6,
+    "ver_chart": 6,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "A",
+    "ver": 7,
+    "ver_song": 7,
+    "ver_chart": 7,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "MAX 300",
+    "ver": 7,
+    "ver_song": 7,
+    "ver_chart": 7,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "PLEASE DON'T GO",
+    "ver": 8,
+    "ver_song": 8,
+    "ver_chart": 8,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "桜",
+    "ver": 8,
+    "ver_song": 8,
+    "ver_chart": 8,
+    "type": "ANOTHER",
+    "tier": "個人差D"
+  },
+  {
+    "title": "moon_child",
+    "ver": 9,
+    "ver_song": 9,
+    "ver_chart": 9,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "one or eight",
+    "ver": 9,
+    "ver_song": 9,
+    "ver_chart": 9,
+    "type": "ANOTHER",
+    "tier": "個人差D"
+  },
+  {
+    "title": "Innocent Walls",
+    "ver": 10,
+    "ver_song": 10,
+    "ver_chart": 10,
+    "type": "ANOTHER",
+    "tier": "個人差D"
+  },
+  {
+    "title": "One More Lovely",
+    "ver": 10,
+    "ver_song": 10,
+    "ver_chart": 10,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "雪月花",
+    "ver": 10,
+    "ver_song": 10,
+    "ver_chart": 10,
+    "type": "ANOTHER",
+    "tier": "個人差E"
+  },
+  {
+    "title": "AA",
+    "ver": 11,
+    "ver_song": 11,
+    "ver_chart": 11,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Be quiet",
+    "ver": 11,
+    "ver_song": 11,
+    "ver_chart": 11,
+    "type": "LEGGENDARIA",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "gigadelic",
+    "ver": 11,
+    "ver_song": 11,
+    "ver_chart": 11,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "RED ZONE",
+    "ver": 11,
+    "ver_song": 11,
+    "ver_chart": 11,
+    "type": "LEGGENDARIA",
+    "tier": "地力E"
+  },
+  {
+    "title": "ピアノ協奏曲第１番”蠍火”",
+    "ver": 11,
+    "ver_song": 11,
+    "ver_chart": 11,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "CaptivAte～浄化～",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "Little Little Princess",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "LEGGENDARIA",
+    "tier": "地力B"
+  },
+  {
+    "title": "rage against usual",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "SCREAM SQUAD",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "ANOTHER",
+    "tier": "個人差E"
+  },
+  {
+    "title": "Scripted Connection⇒ A mix",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "Scripted Connection⇒ A mix",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "LEGGENDARIA",
+    "tier": "地力A"
+  },
+  {
+    "title": "Twelfth Style",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "冥",
+    "ver": 12,
+    "ver_song": 12,
+    "ver_chart": 12,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Concertino in Blue",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "CONTRACT",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "DUE TOMORROW",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "Ganymede",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "waxing and wanding",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "LEGGENDARIA",
+    "tier": "地力A"
+  },
+  {
+    "title": "カゴノトリ～弐式～",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "嘆きの樹",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "華蝶風雪",
+    "ver": 13,
+    "ver_song": 13,
+    "ver_chart": 13,
+    "type": "LEGGENDARIA",
+    "tier": "地力D"
+  },
+  {
+    "title": "Candy Galy",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Fascination MAXX",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "FIRE FIRE",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "GRID KNIGHT",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "LEGGENDARIA",
+    "tier": "地力E"
+  },
+  {
+    "title": "KAMAITACHI",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "LASER CRUSTER",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "Sense 2007",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "snow storm",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "LEGGENDARIA",
+    "tier": "地力F"
+  },
+  {
+    "title": "TRANOID",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "VANESSA",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "VANESSA",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "電人、暁に斃れる。",
+    "ver": 14,
+    "ver_song": 14,
+    "ver_chart": 14,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Anisakis -somatic mutation type\"Forza\"-",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Blue Rain",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力A"
+  },
+  {
+    "title": "four pieces of heaven",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "ICARUS",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "ANOTHER",
+    "tier": "個人差D"
+  },
+  {
+    "title": "ICARUS",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "MENDES",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "NEW GENERATION -もう、お前しか見えない-",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力A"
+  },
+  {
+    "title": "PARANOiA ～HADES～",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "Ristaccia",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "STEEL NEEDLE",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "THE DEEP STRIKER",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力B"
+  },
+  {
+    "title": "Time to Air",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "個人差S"
+  },
+  {
+    "title": "Ubertreffen",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "ミラージュ・レジデンス",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "少年A",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "華爛漫 -Flowers-",
+    "ver": 15,
+    "ver_song": 15,
+    "ver_chart": 15,
+    "type": "LEGGENDARIA",
+    "tier": "地力C"
+  },
+  {
+    "title": "3y3s",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Arabian Rave Night",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "LEGGENDARIA",
+    "tier": "地力B"
+  },
+  {
+    "title": "B4U(BEMANI FOR YOU MIX)",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "BITTER CHOCOLATE STRIKER",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Colorful Cookie",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Go Beyond!!",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Marie Antoinette",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "LEGGENDARIA",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "thunder HOUSE NATION Remix",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "LEGGENDARIA",
+    "tier": "地力C"
+  },
+  {
+    "title": "Y&Co. is dead or alive",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "不沈艦CANDY",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "卑弥呼",
+    "ver": 16,
+    "ver_song": 16,
+    "ver_chart": 16,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "AIR RAID FROM THA UNDAGROUND",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "LEGGENDARIA",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "Almagest",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "Bad Maniacs",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "DOMINION",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "eRAseRmOToRpHAntOM",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "個人差D"
+  },
+  {
+    "title": "Evans",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "EXUSIA",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "G59",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "GOLDEN CROSS",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "mosaic",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "個人差E"
+  },
+  {
+    "title": "quell～the seventh slave～",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Red. by Full Metal Jacket",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "SOLID STATE SQUAD",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "SOLID STATE SQUAD",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "LEGGENDARIA",
+    "tier": "地力A"
+  },
+  {
+    "title": "ワルツ第17番 ト短調”大犬のワルツ”",
+    "ver": 17,
+    "ver_song": 17,
+    "ver_chart": 17,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "ALBIDA",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Broken",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Dances with Snow Fairies",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Dances with Snow Fairies",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "perditus†paradisus",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "reunion",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "sakura storm",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "個人差E"
+  },
+  {
+    "title": "SPECIAL SUMMER CAMPAIGN!",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "Watch Out Pt.2",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "灼熱Beach Side Bunny",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "黒髪乱れし修羅となりて",
+    "ver": 18,
+    "ver_song": 18,
+    "ver_chart": 18,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "A MINSTREL ～ ver. short-scape ～",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "BLACK.by X-Cross Fade",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "DIAVOLO",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "F",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "fffff",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "HAERETICUS",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "NNRT",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Phoenix",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "quaver♪",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Snake Stick",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "The Limbo",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "The Limbo",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "The Sampling Paradise",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Thunderbolt",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Todestrieb",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "WONDER WALKER",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "君のハートにロックオン",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "天空の夜明け",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "子供の落書き帳",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "恋する☆宇宙戦争っ！！",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "恋する☆宇宙戦争っ！！",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "聖人の塔",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "聖人の塔",
+    "ver": 19,
+    "ver_song": 19,
+    "ver_chart": 19,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "Confiserie",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "DAY DREAM",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "Devilz Staircase",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Elemental Creation",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "GAIA",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Hollywood Galaxy",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Illegal Function Call",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "JOMANDA",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "Liberation",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Little Star",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "neu",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Plan 8",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "Proof of the existence",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Sol Cosine Job 2",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "STULTI",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Thor's Hammer",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "Timepiece phase II",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Timepiece phase II (CN Ver.)",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "True Blue",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Valanga",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Zirkfied",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "ΕΛΠΙΣ",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "ΕΛΠΙΣ",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "†渚の小悪魔ラヴリィ～レイディオ†(IIDX EDIT)",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "お米の美味しい炊き方、そしてお米を食べることによるその効果。",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "たまゆら",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "アストライアの双皿",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "カジノファイヤーことみちゃん",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "キャトられ恋はモ～モク",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "シュレーディンガーの猫",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "トリカゴノ鳳凰",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "仮想空間の旅人たち",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "即席！脳直★ミュージックシステム",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "狂イ咲ケ焔ノ華",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "音楽",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "龍と少女とデコヒーレンス",
+    "ver": 20,
+    "ver_song": 20,
+    "ver_chart": 20,
+    "type": "LEGGENDARIA",
+    "tier": "地力B"
+  },
+  {
+    "title": "Adularia",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "ATHER",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "個人差C"
+  },
+  {
+    "title": "Feel The Beat",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Feel The Beat",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Idola",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "INSOMNIA",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "IX",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "KAISER PHOENIX",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "KAISER PHOENIX",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Last Dance",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "MAD ATTACK",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "Miracle 5ympho X",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "個人差S"
+  },
+  {
+    "title": "PUNISHER",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "ra'am",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "Sigmund",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "Sigmund",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Verflucht",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Verflucht",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "VOX UP",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "廿",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "旋律のドグマ～Miserables～",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "海神",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "海神",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "個人差A"
+  },
+  {
+    "title": "煉獄のエルフェリア",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "疾風迅雷",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "疾風迅雷",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "轟け！恋のビーンボール！！",
+    "ver": 21,
+    "ver_song": 21,
+    "ver_chart": 21,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Beat Radiance",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力D"
+  },
+  {
+    "title": "BLUE MIRAGE",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "Broken Sword",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "CHRONO DIVER -NORNIR-",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Chrono Diver -PENDULUMs-",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "cinder",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Cosmic Cat",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力B"
+  },
+  {
+    "title": "Despair of ELFERIA",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "EBONY & IVORY",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "EBONY & IVORY",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "entelecheia",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Gravigazer",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "GUILTY",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "IMPLANTATION",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "Invitation from Mr.C",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "Monopole.",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "NEO GENERATOR SEVEN",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Rave*it!! Rave*it!!",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Reflux",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Shooting Fireball",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Sounds Of Summer",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Symmetry",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "The Least 100sec",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "TIEFSEE",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "TOXIC VIBRATION",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "We're so Happy (P*Light Remix) IIDX ver.",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "ZZ",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "それは花火のような恋",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "リリーゼと炎龍レーヴァテイン",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "共鳴遊戯の華",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "千年ノ理",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "千年ノ理",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "夏色DIARY - L.E.D.-G STYLE MIX -",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "少年は空を辿る",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "紅牡丹",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "表裏一体！？怪盗いいんちょの悩み",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "表裏一体！？怪盗いいんちょの悩み",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "超青少年ノ為ノ超多幸ナ超古典的超舞曲",
+    "ver": 22,
+    "ver_song": 22,
+    "ver_chart": 22,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "199024club -Re:BounceKiller-",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "AO-1",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Blue Spring Express",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Devil's Gear",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "DIAMOND CROSSING",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Dynamite",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Godspeed",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Grand Chariot",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Konzert V",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "M4K3 1T B0UNC3",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Nightmare before oversleep",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "NINJA IS DEAD IIDX ver.",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "NZM",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "POSSESSION",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "STARLIGHT DANCEHALL",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Triple Counter",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Violet Pulse",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "めいさいアイドル☆あいむちゃん♪",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "灼熱 Pt.2 Long Train Running",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "真 地獄超特急 -HELL or HELL-",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "紫陽花 -AZISAI-",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "紫陽花 -AZISAI-",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "LEGGENDARIA",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "駅猫のワルツ",
+    "ver": 23,
+    "ver_song": 23,
+    "ver_chart": 23,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "#MAGiCVLGiRL_TRVP_B3VTZ",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Amazing Mirage",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "LEGGENDARIA",
+    "tier": "地力B"
+  },
+  {
+    "title": "Apocalypse",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "BroGamer",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "Caterpillar",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "DORNWALD ～Junge～",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "ECHIDNA",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "FUZIN RIZIN",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Go Ahead!!",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "GuNGNiR",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "GuNGNiR",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "HADES",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Mare Nectaris",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "OTENAMI Hurricane",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Quakes",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "RAIN",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Rave Cannon",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "SAMURAI-Scramble",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "LEGGENDARIA",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "Sky High",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Steel Edge",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "Summerlights(IIDX Edition)",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Super Rush",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "TOGAKUSHI",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "Umbral",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "LEGGENDARIA",
+    "tier": "地力C"
+  },
+  {
+    "title": "Venom",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "〆",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "イザナミノナゲキ",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "九尾狐夜行",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "刃図羅",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "津軽雪",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "火影",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "焔極OVERKILL",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "童話回廊",
+    "ver": 24,
+    "ver_song": 24,
+    "ver_chart": 24,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "255",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "AA -rebuild-",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "ANCHOR",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Antigravity",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "Arca",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "DEATH†ZIGOQ ～怒りの高速爆走野郎～",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "DEATH†ZIGOQ ～怒りの高速爆走野郎～",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "LEGGENDARIA",
+    "tier": "地力S+"
+  },
+  {
+    "title": "EMERALDAS",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "encounter",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "Initiation",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Life Is A Game ft.DD\"ナカタ\"Metal",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "NITROUS CANNON",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "O/D*20",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "LEGGENDARIA",
+    "tier": "地力A"
+  },
+  {
+    "title": "Papilio ulysses",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "Rampage",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Raspberry Railgun",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "REVOLVER",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "LEGGENDARIA",
+    "tier": "個人差S"
+  },
+  {
+    "title": "The Chase",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "Xperanza",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "シムルグの目醒め",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "東京神話",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "神謳 -RESONANCE-",
+    "ver": 25,
+    "ver_song": 25,
+    "ver_chart": 25,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Carmina",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "Carry Me Away",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Catch Our Fire!",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "dAuntl3ss",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Dr. Chemical & Killing Machine",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Drastic Dramatic",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "DRUNK MONKY",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "EVANESCENT",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "GENE",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "GO OVER WITH GLARE -ROOTAGE 26-",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "HARD BRAIN",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "KILL EACH OTHER",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "L.F.O",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Lethal Weapon",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Level One",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "LOST TECHNOLOGIE",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Painful Fate",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Red. by Jack Trance",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "ruin of opals",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "THE DAY OF JUBILATIONS",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "The Rebellion of Sequencer",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Trill auf G",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Visterhv",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "voltississimo",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "X-DEN",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Xlo",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "お菓子の王国",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "抱きしめてモナムール",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "最小三倍完全数",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "金野火織の金色提言",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "龍王の霊廟(Mausoleum Of The Primal Dragon)",
+    "ver": 26,
+    "ver_song": 26,
+    "ver_chart": 26,
+    "type": "LEGGENDARIA",
+    "tier": "地力C"
+  },
+  {
+    "title": "AKASHIC BREAK",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Artist",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "BEAT PRISONER",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Dans la nuit de l'eternite",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "EROICA",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Everlasting Message",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "LASER CRUSTER (IGNITE REMIX)",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Level 2",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "LIGHTNING STRIKES",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "LIGHTNING STRIKES",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Lords Of The Roundtable",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "Lost Souls",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "Megalara Garuda",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Override",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "LEGGENDARIA",
+    "tier": "地力S"
+  },
+  {
+    "title": "Primitive Vibes",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "SCREW // owo // SCREW",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Smashing Wedge",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "T-REX vs Velociraptor (In the Far east euphoria)",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "THE BRAVE MUST DIE",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "THE F∀UST",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "TRIUMPH",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Vinculum stellarum",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "がっつり陰キャ!? 怪盗いいんちょの億劫^^;",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "ピアノ協奏曲第1番”蠍火” (BlackY Remix)",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "深淵に捧ぐレクイエム",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "魅惑のYUMMYスイーツ",
+    "ver": 27,
+    "ver_song": 27,
+    "ver_chart": 27,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "-65℃",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "ASIAN VIRTUAL REALITIES (MELTING TOGETHER IN DAZZLING DARKNESS)",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "BIGソムタム",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "BLACK or WHITE?",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Burning Flame",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "LEGGENDARIA",
+    "tier": "地力B+"
+  },
+  {
+    "title": "COSMIC RAY",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "DUAL STRIKER",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Empire of Fury",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Fire Beat",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "個人差D"
+  },
+  {
+    "title": "Ignis†Irae",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "innocent revolver",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Level 3",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "MEGAERA",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "Parvati",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "POLKAMANIA",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "Sinus Iridum",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Tiempo Loco",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Viridian",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Vitrum",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "∀",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "スーパー戦湯ババンバーン",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "ディスコルディア",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "バッド・スイーツ、バッド・ドリーム",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "世界の果てに約束の凱歌を -ReUnion-",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "伐折羅-vajra-",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "新宝島",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "水鏡の異界",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "閠槞彁の願い",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "魔法のかくれんぼ",
+    "ver": 28,
+    "ver_song": 28,
+    "ver_chart": 28,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "2 Beasts Unchained",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "ABSOLUTE EVIL",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Aftermath",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "ALTERNATOR",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Angel's Ladder",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Arkadia",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Binary Black Hole",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "Don't believe the hype",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Fegrix",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Flying Castle",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "GiGaGaHell",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "GRAVITON",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "hard-wired",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "LIVE DRIVING!! feat. 花たん",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "n/a",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "One for All",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "PLASMA SOUL NIGHT feat. Nana Takahashi / 709sec.",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Purple Perplex",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Push on Beats!～音ゲの国のeX-ストリーマー～",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "RAGE feat.H14 of LEONAIR",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "Silver Bullet",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Smalt #28598F",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "SOLID WYVERN",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "LEGGENDARIA",
+    "tier": "地力A+"
+  },
+  {
+    "title": "TOMAHAWK",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "Triple Cross",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "WHA",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "グッバイ宣言",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "ハイテックトキオ",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "LEGGENDARIA",
+    "tier": "個人差B"
+  },
+  {
+    "title": "ピアノ独奏無言歌 \"灰燼\"",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "天邪鬼",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "烽火連天の刃",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "烽火連天の刃",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "禊",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "逆月",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "雪上断火",
+    "ver": 29,
+    "ver_song": 29,
+    "ver_chart": 29,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "24h Endurance Race",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "[ ]DENTITY",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Always We Trust In You",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "B.O.D.Y.",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "Bad Encryption",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "Beyond Evolution",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "BIGWAVERS",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Chaotoxin",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "dica dica",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "glacia",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "Hat Surprise (Season 2)",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "I",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "KING",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "LEGGENDARIA",
+    "tier": "地力D"
+  },
+  {
+    "title": "kors k's How to make OTOGE CORE 「LONG」",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Level 4",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "LOUDER ROLLING THUNDER",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "MAX 360",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "Meissa",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "No Border",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "ONE AND ONLY",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Peaktime Booster",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "RINNE",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Somnidiscotheque",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "Super Freak",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "suspicions",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "TECHNOPHOBIA",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "The Clown of 24stairs",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "VOID",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "VOLAQUAS",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "Xerulean",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "≡+≡",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "ぞうしょく！？マイデンティティ",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "儚キ戀ノ幻想譚",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "恋愛＝精度×認識力",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差A+"
+  },
+  {
+    "title": "栄冠のカンパネラ",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "神っぽいな",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "神のシナリオ",
+    "ver": 30,
+    "ver_song": 30,
+    "ver_chart": 30,
+    "type": "ANOTHER",
+    "tier": "個人差C"
+  },
+  {
+    "title": "ACT0",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Ambivalent Vermilia",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力S"
+  },
+  {
+    "title": "CADENZA",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Dahlia",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "frequent",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "GAME ON",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "Level 5",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "個人差S+"
+  },
+  {
+    "title": "MAXIMUM CHEAT GIRL",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Resonant",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "SOLAR ECLIPSE",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "個人差S"
+  },
+  {
+    "title": "Stereo Beasts",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "Sword of Vengeance",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Vermilion Carol",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "Vulnerability",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Xb10r",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "《PL|RAYER》",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力E"
+  },
+  {
+    "title": "フォニイ",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "今宵、ロマンス横丁。",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力A"
+  },
+  {
+    "title": "惑星鉄道",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力S+"
+  },
+  {
+    "title": "摩天楼",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "個人差B"
+  },
+  {
+    "title": "残像ニ繋ガレタ追憶ノHIDEAWAY",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "灼熱Beach Side Bunny (かめりあ's \"Summertime D'n'B\" Remix)",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "個人差A"
+  },
+  {
+    "title": "電腦都市",
+    "ver": 31,
+    "ver_song": 31,
+    "ver_chart": 31,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "1116",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Aqvion",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Bring The Fire",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力D"
+  },
+  {
+    "title": "COSMIC V3LOCITY",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "Cross Fire",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "destination",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "DIVINE JUDGEMENT",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力C"
+  },
+  {
+    "title": "EYE OF THE HEAVEN",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "God Mind",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "hora de verdad",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Lightspeed",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力B+"
+  },
+  {
+    "title": "NOIXIA",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Plazma",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "Satellite Burst",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力A+"
+  },
+  {
+    "title": "Skratch Education Lv-1",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "SμG@R RU$#",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "u gotta beat",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力B"
+  },
+  {
+    "title": "uen",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "XHRONOXAPSULΞ",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "スキッテイエェエエェ!!!!",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "スパークリング☆彡ハイパーチューン！！",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "地力F"
+  },
+  {
+    "title": "天使のカンタータ -Cantata of Angels-",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "灼熱 Lost Summer Dayz",
+    "ver": 32,
+    "ver_song": 32,
+    "ver_chart": 32,
+    "type": "ANOTHER",
+    "tier": "個人差B+"
+  },
+  {
+    "title": "2 Be Continued",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Begin",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Lisa-RICCIA",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "Lisa-RICCIA",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "LEGGENDARIA",
+    "tier": "-"
+  },
+  {
+    "title": "Makin' It",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "ιgniЯRuina",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "⁽⁽ଘ( ˙꒳˙ )ଓ⁾⁾ beyond reason",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  },
+  {
+    "title": "ビビッド ☆+*。キラキライム",
+    "ver": 33,
+    "ver_song": 33,
+    "ver_chart": 33,
+    "type": "ANOTHER",
+    "tier": "-"
+  }
+]
