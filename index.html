@@ -43,20 +43,21 @@
 
 <script>
     $(document).ready(function() {
-        fetch('master_data.json')
-            .then(response => response.json())
+        // 修正箇所: dataフォルダ内のファイルを指定
+        fetch('data/master_data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("HTTP Status: " + response.status);
+                }
+                return response.json();
+            })
             .then(data => {
-                
-                // ===============================================
                 // データ修正処理: エスケープ文字(\)の除去
-                // ===============================================
                 data.forEach(song => {
                     if (song.title) {
-                        // "ピアノ独奏無言歌 \"灰燼\"" -> "ピアノ独奏無言歌 "灰燼""
                         song.title = song.title.replace(/\\/g, '');
                     }
                 });
-                // ===============================================
 
                 $('#scoreTable').DataTable({
                     data: data,
@@ -83,7 +84,6 @@
                             data: 'type', 
                             title: 'Type',
                             width: '20%'
-                            // 色分け処理を削除し、テキストのみ表示
                         },
                         { 
                             data: 'tier', 
@@ -105,7 +105,7 @@
                         }
                     ],
                     pageLength: 100,
-                    order: [[3, 'asc'], [0, 'asc']], // Tier昇順 -> Ver昇順
+                    order: [[3, 'asc'], [0, 'asc']],
                     language: {
                         url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json"
                     }
@@ -113,7 +113,7 @@
             })
             .catch(err => {
                 console.error('JSON Load Error:', err);
-                alert('master_data.json の読み込みに失敗しました。');
+                alert('データの読み込みに失敗しました。パス(data/master_data.json)を確認してください。');
             });
     });
 </script>
