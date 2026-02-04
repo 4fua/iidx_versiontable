@@ -30,10 +30,21 @@
 
         /* コントロール */
         .controls { background: white; padding: 15px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+        .control-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap:10px; }
         .filter-group { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; }
         .checkbox-wrapper { cursor: pointer; display: inline-flex; align-items: center; background: #eee; padding: 2px 8px; border-radius: 4px; }
         .checkbox-wrapper:hover { background: #ddd; }
         .checkbox-wrapper input { margin-right: 5px; }
+        .small-btn { padding: 4px 10px; cursor: pointer; }
+
+        /* トグルスイッチ */
+        .toggle-wrapper { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: bold; background: #f9f9f9; padding: 5px 10px; border-radius: 4px; border: 1px solid #eee; }
+        .switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .3s; border-radius: 20px; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
+        input:checked + .slider { background-color: #2196F3; }
+        input:checked + .slider:before { transform: translateX(18px); }
 
         /* バージョン枠 */
         .ver-section { margin-bottom: 30px; border: 1px solid #999; background: white; }
@@ -101,14 +112,26 @@
 
     <div id="page-main" class="page">
         <div class="controls">
-            <button onclick="location.reload()" style="cursor:pointer; margin-bottom:10px;">← 戻る</button>
+            <div class="control-row">
+                <button class="small-btn" onclick="location.reload()">← 戻る</button>
+                
+                <div class="toggle-wrapper">
+                    <span>楽曲初出</span>
+                    <label class="switch">
+                        <input type="checkbox" id="verToggle" onchange="updateDisplay()" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>譜面初出</span>
+                </div>
+            </div>
+
             <div class="filter-group">
                 <span style="font-weight:bold;">Tier:</span>
                 <div id="tier-filters"></div>
             </div>
             <div style="margin-top:10px;">
-                <button onclick="toggleAllFilters(true)">全選択</button>
-                <button onclick="toggleAllFilters(false)">全解除</button>
+                <button class="small-btn" onclick="toggleAllFilters(true)">全選択</button>
+                <button class="small-btn" onclick="toggleAllFilters(false)">全解除</button>
             </div>
         </div>
         <div id="table-container"></div>
@@ -130,44 +153,75 @@
             "FULLCOMBO CLEAR": 7, "EX HARD CLEAR": 6, "HARD CLEAR": 5,
             "CLEAR": 4, "EASY CLEAR": 3, "ASSIST CLEAR": 2, "FAILED": 1, "NO PLAY": 0
         };
+        
+        // ソート順定義 (難しい順)
+        const TIER_ORDER = [
+            "地力S+", "個人差S+", "地力S", "個人差S", 
+            "地力A+", "個人差A+", "地力A", "個人差A", 
+            "地力B+", "個人差B+", "地力B", "個人差B", 
+            "地力C", "個人差C", "地力D", "個人差D",
+            "地力E", "個人差E", "地力F", "個人差F"
+        ];
 
         // グローバル変数
         let masterData = [];
         let userLamps = {};
+        let songOriginVer = {}; // 曲の初出バージョン (ANOTHER準拠)
+        let availableTiers = new Set();
 
-        // 初期化: JSON読み込みとチェックボックス生成のみ行う
         window.onload = async function() {
             try {
                 const res = await fetch(MASTER_JSON_URL);
                 if (!res.ok) throw new Error("JSON読み込み失敗");
                 masterData = await res.json();
                 
-                // Tier一覧を取得 (出現順)
-                const tierSet = new Set();
+                // データ解析: Tier収集 と 曲の初出バージョンの辞書作成
                 masterData.forEach(d => {
-                    if (d.tier && d.tier !== '-') tierSet.add(d.tier);
+                    if (d.tier && d.tier !== '-') availableTiers.add(d.tier);
+                    
+                    // ANOTHER譜面のバージョンを「曲の初出」として記録
+                    const v = d.ver_song || d.ver || 99;
+                    if (d.type === 'ANOTHER') {
+                        songOriginVer[d.title] = v;
+                    }
                 });
 
-                // フィルタ生成
-                const container = document.getElementById('tier-filters');
-                tierSet.forEach(tier => {
-                    const label = document.createElement('label');
-                    label.className = 'checkbox-wrapper';
-                    label.innerHTML = `<input type="checkbox" value="${tier}" checked onchange="updateDisplay()"> ${tier}`;
-                    container.appendChild(label);
-                });
-                // その他
-                const label = document.createElement('label');
-                label.className = 'checkbox-wrapper';
-                label.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
-                container.appendChild(label);
+                initFilters();
 
             } catch (e) {
                 alert("初期化エラー: " + e);
             }
         };
 
-        // CSV読み込み処理
+        function initFilters() {
+            const container = document.getElementById('tier-filters');
+            container.innerHTML = "";
+
+            // 定義順(TIER_ORDER)にチェックボックスを生成
+            TIER_ORDER.forEach(tier => {
+                if (availableTiers.has(tier)) {
+                    createCheckbox(container, tier);
+                    availableTiers.delete(tier);
+                }
+            });
+            // 定義外のTierがあれば末尾に追加
+            availableTiers.forEach(tier => {
+                createCheckbox(container, tier);
+            });
+            // その他
+            const label = document.createElement('label');
+            label.className = 'checkbox-wrapper';
+            label.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
+            container.appendChild(label);
+        }
+
+        function createCheckbox(container, val) {
+            const label = document.createElement('label');
+            label.className = 'checkbox-wrapper';
+            label.innerHTML = `<input type="checkbox" value="${val}" checked onchange="updateDisplay()"> ${val}`;
+            container.appendChild(label);
+        }
+
         async function processData() {
             const fileInput = document.getElementById('csvFile');
             const textInput = document.getElementById('csvText');
@@ -201,13 +255,11 @@
             });
         }
 
-        // CSVパース (シンプル版)
         function parseUserCSV(text) {
             userLamps = {};
             const rows = text.split(/\r\n|\n/);
             let headerIdx = -1, colMap = {};
 
-            // ヘッダー検索
             for (let i = 0; i < rows.length; i++) {
                 if (rows[i].includes("タイトル")) {
                     headerIdx = i;
@@ -217,12 +269,8 @@
             }
             if (headerIdx === -1) throw new Error("ヘッダーが見つかりません");
 
-            // データ読み込み
             for (let i = headerIdx + 1; i < rows.length; i++) {
-                // 簡易split (引用符内のカンマは無視しない簡易実装だが、曲名には通常カンマはないため動作する)
-                // もし厳密さが必要なら以前のparseCSVLineを使うが、ここでは安定重視で簡易splitにする
-                // ※曲名にカンマがある場合は以前の関数が必要。念のため以前の関数を使います。
-                const row = parseCSVLine(rows[i]); 
+                const row = parseCSVLine(rows[i]);
                 if (!row || row.length < 2) continue;
                 
                 const title = row[colMap["タイトル"]];
@@ -248,44 +296,68 @@
             return res;
         }
 
-        // 描画処理
         function updateDisplay() {
             const activeFilters = new Set();
             document.querySelectorAll('#tier-filters input:checked').forEach(cb => activeFilters.add(cb.value));
             
+            // トグル状態: ON(true)=譜面初出, OFF(false)=楽曲初出
+            const showChartVer = document.getElementById('verToggle').checked;
+
             const container = document.getElementById('table-container');
             container.innerHTML = "";
 
-            // データをバージョンごとにまとめる
             const verGroups = {};
 
             masterData.forEach(song => {
                 const tier = song.tier || "-";
                 if (!activeFilters.has(tier)) return;
 
-                // ランプ情報の取得
                 let myLamp = "NO PLAY";
                 if (userLamps[song.title]) {
                     if (song.type === "ANOTHER") myLamp = userLamps[song.title].ANOTHER;
                     else if (song.type === "LEGGENDARIA") myLamp = userLamps[song.title].LEGGENDARIA;
                     else if (song.type === "HYPER") myLamp = userLamps[song.title].HYPER;
                 }
-                
-                // バージョン判定 (一番単純なロジック: verがあればver、なければver_song)
-                // これにより新旧どちらのJSONでも動く
-                const v = song.ver || song.ver_song || 99;
+                if (!myLamp) myLamp = "NO PLAY";
 
-                if (!verGroups[v]) verGroups[v] = [];
-                verGroups[v].push({ ...song, myLamp: myLamp });
+                // --- バージョン判定ロジック ---
+                let targetVer = 99;
+
+                if (showChartVer) {
+                    // ON: 譜面初出 (JSONに ver_chart があれば優先、なければ ver)
+                    targetVer = song.ver_chart || song.ver || 99;
+                } else {
+                    // OFF: 楽曲初出
+                    // LEGGENDARIAの場合は ANOTHER譜面のバージョン(songOriginVer) を参照
+                    if (song.type === 'LEGGENDARIA' && songOriginVer[song.title]) {
+                        targetVer = songOriginVer[song.title];
+                    } else {
+                        // それ以外、または辞書にない場合は ver_song > ver の順で参照
+                        targetVer = song.ver_song || song.ver || 99;
+                    }
+                }
+                
+                if (!verGroups[targetVer]) verGroups[targetVer] = [];
+                verGroups[targetVer].push({ ...song, myLamp: myLamp });
             });
 
-            // バージョン順に表示
+            // バージョンID順に表示
             Object.keys(verGroups).sort((a,b) => Number(a) - Number(b)).forEach(verId => {
                 const songs = verGroups[verId];
                 if (songs.length === 0) return;
 
-                // タイトル順ソート
-                songs.sort((a, b) => a.title.localeCompare(b.title));
+                // ソート処理: Tier順(難しい順) -> 曲名順
+                songs.sort((a, b) => {
+                    let idxA = TIER_ORDER.indexOf(a.tier);
+                    let idxB = TIER_ORDER.indexOf(b.tier);
+                    if (idxA === -1) idxA = 999;
+                    if (idxB === -1) idxB = 999;
+
+                    if (idxA !== idxB) {
+                        return idxA - idxB; // インデックスが小さい(S+)ほうが先
+                    }
+                    return a.title.localeCompare(b.title);
+                });
 
                 // HTML生成
                 const section = document.createElement('div');
@@ -307,7 +379,7 @@
                     const lampClean = s.myLamp.replace(/ /g, '_');
                     let suffix = "";
                     if (s.type === 'LEGGENDARIA') suffix = '<span class="mark-l">L</span>';
-                    if (s.type === 'HYPER') suffix = '<span class="mark-h">H</span>';
+                    else if (s.type === 'HYPER') suffix = '<span class="mark-h">H</span>';
 
                     const box = document.createElement('div');
                     box.className = `song-box lamp-${lampClean}`;
