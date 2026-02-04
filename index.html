@@ -70,12 +70,12 @@
         .ver-badges { font-size: 0.8em; }
         .status-badge { padding: 2px 6px; border-radius: 2px; font-weight: bold; color: #333; background: #eee; }
 
-        /* グリッド: 隙間(gap)を1pxにして、背景色(#999)を見せることで罫線にする */
+        /* グリッド */
         .song-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
             gap: 1px; 
-            background-color: #999; /* 罫線の色 */
+            background-color: #999; 
             border-top: 1px solid #999;
         }
 
@@ -101,10 +101,9 @@
         /* 背景色クラス */
         .lamp-FULLCOMBO_CLEAR { background-color: var(--bg-fc); }
         .lamp-EX_HARD_CLEAR   { background-color: var(--bg-exh); }
-        .lamp-HARD_CLEAR      { background-color: var(--bg-hard); color: white; } /* HARDは白文字 */
-        .lamp-HARD_CLEAR .mark-l { color: #ffcccc; } /* HARD背景時の文字色調整 */
+        .lamp-HARD_CLEAR      { background-color: var(--bg-hard); color: white; }
+        .lamp-HARD_CLEAR .mark-l { color: #ffcccc; }
         .lamp-HARD_CLEAR .mark-h { color: #ffffcc; }
-
         .lamp-CLEAR           { background-color: var(--bg-clear); }
         .lamp-EASY_CLEAR      { background-color: var(--bg-easy); }
         .lamp-ASSIST_CLEAR    { background-color: var(--bg-assist); }
@@ -187,14 +186,6 @@
             "NO PLAY": 0
         };
 
-        const TIER_ORDER = [
-            "地力S+", "個人差S+", "地力S", "個人差S", 
-            "地力A+", "個人差A+", "地力A", "個人差A", 
-            "地力B+", "個人差B+", "地力B", "個人差B", 
-            "地力C", "個人差C", "地力D", "個人差D",
-            "地力E", "個人差E", "地力F", "個人差F"
-        ];
-
         let masterData = [];
         let songOriginVer = {};
         let userLamps = {};
@@ -208,23 +199,20 @@
                 masterData = await response.json();
                 
                 masterData.forEach(d => {
+                    // Tierを収集 (ソートせずに、出てきた順に格納)
                     if(d.tier && d.tier !== '-') allTiers.add(d.tier);
+                    
                     const v = d.ver || d.ver_song || 99;
                     if (d.type === 'ANOTHER') {
                         songOriginVer[d.title] = v;
                     }
                 });
                 
-                const sortedTiers = Array.from(allTiers).sort((a, b) => {
-                    let idxA = TIER_ORDER.indexOf(a);
-                    let idxB = TIER_ORDER.indexOf(b);
-                    if (idxA === -1) idxA = 999;
-                    if (idxB === -1) idxB = 999;
-                    return idxA - idxB;
-                });
-
                 const filterContainer = document.getElementById('tier-filters');
-                sortedTiers.forEach(tier => {
+                
+                // ソート処理を削除し、そのままループで生成
+                // (Setの挿入順 = JSONの出現順 = おそらくHTMLの記述順になるはず)
+                allTiers.forEach(tier => {
                     activeFilters.add(tier);
                     const label = document.createElement('label');
                     label.className = 'checkbox-wrapper';
@@ -232,6 +220,7 @@
                     filterContainer.appendChild(label);
                 });
 
+                // その他
                 const unknownLabel = document.createElement('label');
                 unknownLabel.className = 'checkbox-wrapper';
                 unknownLabel.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
@@ -240,6 +229,7 @@
 
             } catch (e) {
                 alert("マスターデータの読み込みに失敗しました。\n" + e);
+                console.error(e);
             }
         };
 
@@ -346,18 +336,13 @@
                 verGroups[currentVer].push({ ...song, myLamp: myLamp });
             });
 
+            // バージョン番号順に表示
             Object.keys(verGroups).sort((a,b) => Number(a) - Number(b)).forEach(verId => {
                 const songs = verGroups[verId];
                 if (songs.length === 0) return;
 
-                songs.sort((a, b) => {
-                    let idxA = TIER_ORDER.indexOf(a.tier);
-                    let idxB = TIER_ORDER.indexOf(b.tier);
-                    if (idxA === -1) idxA = 999;
-                    if (idxB === -1) idxB = 999;
-                    if (idxA !== idxB) return idxA - idxB;
-                    return a.title.localeCompare(b.title);
-                });
+                // ソートロジックを単純化: タイトル順のみ
+                songs.sort((a, b) => a.title.localeCompare(b.title));
 
                 const section = document.createElement('div');
                 section.className = 'ver-section';
