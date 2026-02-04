@@ -97,9 +97,9 @@
   },
   {
     "title": "Be quiet",
-    "ver": 11,
+    "ver": 28,
     "ver_song": 11,
-    "ver_chart": 11,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "個人差A+"
   },
@@ -113,9 +113,9 @@
   },
   {
     "title": "RED ZONE",
-    "ver": 11,
+    "ver": 25,
     "ver_song": 11,
-    "ver_chart": 11,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力E"
   },
@@ -129,17 +129,17 @@
   },
   {
     "title": "CaptivAte～浄化～",
-    "ver": 12,
+    "ver": 32,
     "ver_song": 12,
-    "ver_chart": 12,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
   {
     "title": "Little Little Princess",
-    "ver": 12,
+    "ver": 25,
     "ver_song": 12,
-    "ver_chart": 12,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力B"
   },
@@ -169,17 +169,17 @@
   },
   {
     "title": "Scripted Connection⇒ A mix",
-    "ver": 12,
+    "ver": 29,
     "ver_song": 12,
-    "ver_chart": 12,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力A"
   },
   {
     "title": "Twelfth Style",
-    "ver": 12,
+    "ver": 26,
     "ver_song": 12,
-    "ver_chart": 12,
+    "ver_chart": 26,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
@@ -201,9 +201,9 @@
   },
   {
     "title": "CONTRACT",
-    "ver": 13,
+    "ver": 25,
     "ver_song": 13,
-    "ver_chart": 13,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -217,17 +217,17 @@
   },
   {
     "title": "Ganymede",
-    "ver": 13,
+    "ver": 28,
     "ver_song": 13,
-    "ver_chart": 13,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
   {
     "title": "waxing and wanding",
-    "ver": 13,
+    "ver": 25,
     "ver_song": 13,
-    "ver_chart": 13,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力A"
   },
@@ -249,9 +249,9 @@
   },
   {
     "title": "華蝶風雪",
-    "ver": 13,
+    "ver": 31,
     "ver_song": 13,
-    "ver_chart": 13,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力D"
   },
@@ -281,17 +281,17 @@
   },
   {
     "title": "GRID KNIGHT",
-    "ver": 14,
+    "ver": 26,
     "ver_song": 14,
-    "ver_chart": 14,
+    "ver_chart": 26,
     "type": "LEGGENDARIA",
     "tier": "地力E"
   },
   {
     "title": "KAMAITACHI",
-    "ver": 14,
+    "ver": 24,
     "ver_song": 14,
-    "ver_chart": 14,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -313,17 +313,17 @@
   },
   {
     "title": "snow storm",
-    "ver": 14,
+    "ver": 27,
     "ver_song": 14,
-    "ver_chart": 14,
+    "ver_chart": 27,
     "type": "LEGGENDARIA",
     "tier": "地力F"
   },
   {
     "title": "TRANOID",
-    "ver": 14,
+    "ver": 27,
     "ver_song": 14,
-    "ver_chart": 14,
+    "ver_chart": 27,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -337,9 +337,9 @@
   },
   {
     "title": "VANESSA",
-    "ver": 14,
+    "ver": 24,
     "ver_song": 14,
-    "ver_chart": 14,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -353,25 +353,25 @@
   },
   {
     "title": "Anisakis -somatic mutation type\"Forza\"-",
-    "ver": 15,
+    "ver": 28,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
   {
     "title": "Blue Rain",
-    "ver": 15,
+    "ver": 25,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力A"
   },
   {
     "title": "four pieces of heaven",
-    "ver": 15,
+    "ver": 30,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -385,9 +385,9 @@
   },
   {
     "title": "ICARUS",
-    "ver": 15,
+    "ver": 24,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -401,9 +401,9 @@
   },
   {
     "title": "NEW GENERATION -もう、お前しか見えない-",
-    "ver": 15,
+    "ver": 29,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力A"
   },
@@ -425,41 +425,41 @@
   },
   {
     "title": "STEEL NEEDLE",
-    "ver": 15,
+    "ver": 28,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
   {
     "title": "THE DEEP STRIKER",
-    "ver": 15,
+    "ver": 24,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力B"
   },
   {
     "title": "Time to Air",
-    "ver": 15,
+    "ver": 29,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "個人差S"
   },
   {
     "title": "Ubertreffen",
-    "ver": 15,
+    "ver": 25,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
   {
     "title": "ミラージュ・レジデンス",
-    "ver": 15,
+    "ver": 30,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "個人差B+"
   },
@@ -473,9 +473,9 @@
   },
   {
     "title": "華爛漫 -Flowers-",
-    "ver": 15,
+    "ver": 29,
     "ver_song": 15,
-    "ver_chart": 15,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力C"
   },
@@ -489,17 +489,17 @@
   },
   {
     "title": "Arabian Rave Night",
-    "ver": 16,
+    "ver": 28,
     "ver_song": 16,
-    "ver_chart": 16,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力B"
   },
   {
     "title": "B4U(BEMANI FOR YOU MIX)",
-    "ver": 16,
+    "ver": 26,
     "ver_song": 16,
-    "ver_chart": 16,
+    "ver_chart": 26,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -529,17 +529,17 @@
   },
   {
     "title": "Marie Antoinette",
-    "ver": 16,
+    "ver": 28,
     "ver_song": 16,
-    "ver_chart": 16,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "個人差B+"
   },
   {
     "title": "thunder HOUSE NATION Remix",
-    "ver": 16,
+    "ver": 28,
     "ver_song": 16,
-    "ver_chart": 16,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力C"
   },
@@ -569,9 +569,9 @@
   },
   {
     "title": "AIR RAID FROM THA UNDAGROUND",
-    "ver": 17,
+    "ver": 26,
     "ver_song": 17,
-    "ver_chart": 17,
+    "ver_chart": 26,
     "type": "LEGGENDARIA",
     "tier": "個人差B+"
   },
@@ -673,9 +673,9 @@
   },
   {
     "title": "SOLID STATE SQUAD",
-    "ver": 17,
+    "ver": 24,
     "ver_song": 17,
-    "ver_chart": 17,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力A"
   },
@@ -713,9 +713,9 @@
   },
   {
     "title": "Dances with Snow Fairies",
-    "ver": 18,
+    "ver": 30,
     "ver_song": 18,
-    "ver_chart": 18,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -777,9 +777,9 @@
   },
   {
     "title": "A MINSTREL ～ ver. short-scape ～",
-    "ver": 19,
+    "ver": 32,
     "ver_song": 19,
-    "ver_chart": 19,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -833,9 +833,9 @@
   },
   {
     "title": "Phoenix",
-    "ver": 19,
+    "ver": 29,
     "ver_song": 19,
-    "ver_chart": 19,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -865,9 +865,9 @@
   },
   {
     "title": "The Limbo",
-    "ver": 19,
+    "ver": 30,
     "ver_song": 19,
-    "ver_chart": 19,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -905,9 +905,9 @@
   },
   {
     "title": "君のハートにロックオン",
-    "ver": 19,
+    "ver": 29,
     "ver_song": 19,
-    "ver_chart": 19,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -937,9 +937,9 @@
   },
   {
     "title": "恋する☆宇宙戦争っ！！",
-    "ver": 19,
+    "ver": 31,
     "ver_song": 19,
-    "ver_chart": 19,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -953,9 +953,9 @@
   },
   {
     "title": "聖人の塔",
-    "ver": 19,
+    "ver": 32,
     "ver_song": 19,
-    "ver_chart": 19,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -1009,9 +1009,9 @@
   },
   {
     "title": "Illegal Function Call",
-    "ver": 20,
+    "ver": 29,
     "ver_song": 20,
-    "ver_chart": 20,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -1137,9 +1137,9 @@
   },
   {
     "title": "ΕΛΠΙΣ",
-    "ver": 20,
+    "ver": 28,
     "ver_song": 20,
-    "ver_chart": 20,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
@@ -1153,9 +1153,9 @@
   },
   {
     "title": "お米の美味しい炊き方、そしてお米を食べることによるその効果。",
-    "ver": 20,
+    "ver": 28,
     "ver_song": 20,
-    "ver_chart": 20,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -1177,9 +1177,9 @@
   },
   {
     "title": "カジノファイヤーことみちゃん",
-    "ver": 20,
+    "ver": 32,
     "ver_song": 20,
-    "ver_chart": 20,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -1209,9 +1209,9 @@
   },
   {
     "title": "仮想空間の旅人たち",
-    "ver": 20,
+    "ver": 24,
     "ver_song": 20,
-    "ver_chart": 20,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
@@ -1241,9 +1241,9 @@
   },
   {
     "title": "龍と少女とデコヒーレンス",
-    "ver": 20,
+    "ver": 25,
     "ver_song": 20,
-    "ver_chart": 20,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力B"
   },
@@ -1257,9 +1257,9 @@
   },
   {
     "title": "ATHER",
-    "ver": 21,
+    "ver": 30,
     "ver_song": 21,
-    "ver_chart": 21,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "個人差C"
   },
@@ -1313,9 +1313,9 @@
   },
   {
     "title": "KAISER PHOENIX",
-    "ver": 21,
+    "ver": 26,
     "ver_song": 21,
-    "ver_chart": 21,
+    "ver_chart": 26,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -1329,17 +1329,17 @@
   },
   {
     "title": "MAD ATTACK",
-    "ver": 21,
+    "ver": 31,
     "ver_song": 21,
-    "ver_chart": 21,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "個人差B+"
   },
   {
     "title": "Miracle 5ympho X",
-    "ver": 21,
+    "ver": 31,
     "ver_song": 21,
-    "ver_chart": 21,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "個人差S"
   },
@@ -1401,9 +1401,9 @@
   },
   {
     "title": "廿",
-    "ver": 21,
+    "ver": 25,
     "ver_song": 21,
-    "ver_chart": 21,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "個人差B+"
   },
@@ -1425,9 +1425,9 @@
   },
   {
     "title": "海神",
-    "ver": 21,
+    "ver": 31,
     "ver_song": 21,
-    "ver_chart": 21,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "個人差A"
   },
@@ -1489,9 +1489,9 @@
   },
   {
     "title": "CHRONO DIVER -NORNIR-",
-    "ver": 22,
+    "ver": 23,
     "ver_song": 22,
-    "ver_chart": 22,
+    "ver_chart": 23,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -1513,9 +1513,9 @@
   },
   {
     "title": "Cosmic Cat",
-    "ver": 22,
+    "ver": 24,
     "ver_song": 22,
-    "ver_chart": 22,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力B"
   },
@@ -1537,9 +1537,9 @@
   },
   {
     "title": "EBONY & IVORY",
-    "ver": 22,
+    "ver": 24,
     "ver_song": 22,
-    "ver_chart": 22,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -1561,9 +1561,9 @@
   },
   {
     "title": "GUILTY",
-    "ver": 22,
+    "ver": 31,
     "ver_song": 22,
-    "ver_chart": 22,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
@@ -1713,9 +1713,9 @@
   },
   {
     "title": "千年ノ理",
-    "ver": 22,
+    "ver": 27,
     "ver_song": 22,
-    "ver_chart": 22,
+    "ver_chart": 27,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -1753,9 +1753,9 @@
   },
   {
     "title": "表裏一体！？怪盗いいんちょの悩み",
-    "ver": 22,
+    "ver": 31,
     "ver_song": 22,
-    "ver_chart": 22,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -1881,9 +1881,9 @@
   },
   {
     "title": "STARLIGHT DANCEHALL",
-    "ver": 23,
+    "ver": 24,
     "ver_song": 23,
-    "ver_chart": 23,
+    "ver_chart": 24,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
@@ -1897,9 +1897,9 @@
   },
   {
     "title": "Violet Pulse",
-    "ver": 23,
+    "ver": 30,
     "ver_song": 23,
-    "ver_chart": 23,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -1937,9 +1937,9 @@
   },
   {
     "title": "紫陽花 -AZISAI-",
-    "ver": 23,
+    "ver": 31,
     "ver_song": 23,
-    "ver_chart": 23,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "個人差A+"
   },
@@ -1961,9 +1961,9 @@
   },
   {
     "title": "Amazing Mirage",
-    "ver": 24,
+    "ver": 25,
     "ver_song": 24,
-    "ver_chart": 24,
+    "ver_chart": 25,
     "type": "LEGGENDARIA",
     "tier": "地力B"
   },
@@ -1977,9 +1977,9 @@
   },
   {
     "title": "BroGamer",
-    "ver": 24,
+    "ver": 29,
     "ver_song": 24,
-    "ver_chart": 24,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -2033,9 +2033,9 @@
   },
   {
     "title": "GuNGNiR",
-    "ver": 24,
+    "ver": 27,
     "ver_song": 24,
-    "ver_chart": 24,
+    "ver_chart": 27,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -2089,9 +2089,9 @@
   },
   {
     "title": "SAMURAI-Scramble",
-    "ver": 24,
+    "ver": 28,
     "ver_song": 24,
-    "ver_chart": 24,
+    "ver_chart": 28,
     "type": "LEGGENDARIA",
     "tier": "個人差S+"
   },
@@ -2137,9 +2137,9 @@
   },
   {
     "title": "Umbral",
-    "ver": 24,
+    "ver": 29,
     "ver_song": 24,
-    "ver_chart": 24,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力C"
   },
@@ -2265,9 +2265,9 @@
   },
   {
     "title": "DEATH†ZIGOQ ～怒りの高速爆走野郎～",
-    "ver": 25,
+    "ver": 31,
     "ver_song": 25,
-    "ver_chart": 25,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力S+"
   },
@@ -2313,9 +2313,9 @@
   },
   {
     "title": "O/D*20",
-    "ver": 25,
+    "ver": 31,
     "ver_song": 25,
-    "ver_chart": 25,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力A"
   },
@@ -2345,9 +2345,9 @@
   },
   {
     "title": "REVOLVER",
-    "ver": 25,
+    "ver": 29,
     "ver_song": 25,
-    "ver_chart": 25,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "個人差S"
   },
@@ -2633,9 +2633,9 @@
   },
   {
     "title": "龍王の霊廟(Mausoleum Of The Primal Dragon)",
-    "ver": 26,
+    "ver": 30,
     "ver_song": 26,
-    "ver_chart": 26,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "地力C"
   },
@@ -2713,9 +2713,9 @@
   },
   {
     "title": "LIGHTNING STRIKES",
-    "ver": 27,
+    "ver": 32,
     "ver_song": 27,
-    "ver_chart": 27,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -2729,9 +2729,9 @@
   },
   {
     "title": "Lost Souls",
-    "ver": 27,
+    "ver": 31,
     "ver_song": 27,
-    "ver_chart": 27,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -2745,9 +2745,9 @@
   },
   {
     "title": "Override",
-    "ver": 27,
+    "ver": 29,
     "ver_song": 27,
-    "ver_chart": 27,
+    "ver_chart": 29,
     "type": "LEGGENDARIA",
     "tier": "地力S"
   },
@@ -2881,9 +2881,9 @@
   },
   {
     "title": "Burning Flame",
-    "ver": 28,
+    "ver": 30,
     "ver_song": 28,
-    "ver_chart": 28,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "地力B+"
   },
@@ -2961,9 +2961,9 @@
   },
   {
     "title": "POLKAMANIA",
-    "ver": 28,
+    "ver": 33,
     "ver_song": 28,
-    "ver_chart": 28,
+    "ver_chart": 33,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -3049,9 +3049,9 @@
   },
   {
     "title": "新宝島",
-    "ver": 28,
+    "ver": 32,
     "ver_song": 28,
-    "ver_chart": 28,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -3257,9 +3257,9 @@
   },
   {
     "title": "SOLID WYVERN",
-    "ver": 29,
+    "ver": 31,
     "ver_song": 29,
-    "ver_chart": 29,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力A+"
   },
@@ -3289,17 +3289,17 @@
   },
   {
     "title": "グッバイ宣言",
-    "ver": 29,
+    "ver": 32,
     "ver_song": 29,
-    "ver_chart": 29,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
   {
     "title": "ハイテックトキオ",
-    "ver": 29,
+    "ver": 30,
     "ver_song": 29,
-    "ver_chart": 29,
+    "ver_chart": 30,
     "type": "LEGGENDARIA",
     "tier": "個人差B"
   },
@@ -3329,9 +3329,9 @@
   },
   {
     "title": "烽火連天の刃",
-    "ver": 29,
+    "ver": 32,
     "ver_song": 29,
-    "ver_chart": 29,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -3457,9 +3457,9 @@
   },
   {
     "title": "KING",
-    "ver": 30,
+    "ver": 31,
     "ver_song": 30,
-    "ver_chart": 30,
+    "ver_chart": 31,
     "type": "LEGGENDARIA",
     "tier": "地力D"
   },
@@ -3601,9 +3601,9 @@
   },
   {
     "title": "≡+≡",
-    "ver": 30,
+    "ver": 33,
     "ver_song": 30,
-    "ver_chart": 30,
+    "ver_chart": 33,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -3641,9 +3641,9 @@
   },
   {
     "title": "神っぽいな",
-    "ver": 30,
+    "ver": 32,
     "ver_song": 30,
-    "ver_chart": 30,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -3785,9 +3785,9 @@
   },
   {
     "title": "フォニイ",
-    "ver": 31,
+    "ver": 32,
     "ver_song": 31,
-    "ver_chart": 31,
+    "ver_chart": 32,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
@@ -3937,9 +3937,9 @@
   },
   {
     "title": "Plazma",
-    "ver": 32,
+    "ver": 33,
     "ver_song": 32,
-    "ver_chart": 32,
+    "ver_chart": 33,
     "type": "LEGGENDARIA",
     "tier": "-"
   },
