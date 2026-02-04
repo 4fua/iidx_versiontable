@@ -8,45 +8,47 @@
         :root {
             --lamp-noplay: #ffffff;
             --lamp-failed: #c0c0c0;
-            --lamp-assist: #ffc0cb; /* Pink */
-            --lamp-easy: #98fb98;   /* Light Green */
-            --lamp-normal: #87ceeb; /* Sky Blue */
-            --lamp-hard: #ff6347;   /* Tomato Red */
-            --lamp-exh: #ffd700;    /* Gold/Yellow */
-            --lamp-fc: #ffa500;     /* Orange */
+            --lamp-assist: #ffc0cb;
+            --lamp-easy: #98fb98;
+            --lamp-normal: #87ceeb;
+            --lamp-hard: #ff6347;
+            --lamp-exh: #ffd700;
+            --lamp-fc: #ffa500;
             --bg-dark: #222;
             --text-light: #eee;
         }
-
         body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-        
-        /* --- 画面切り替え用 --- */
         .page { display: none; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .active { display: block; }
-
-        /* --- Input Page --- */
         .input-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         textarea { width: 100%; height: 150px; margin-top: 10px; padding: 10px; }
         .btn { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; margin-top: 10px; }
         .btn:hover { background: #0056b3; }
         .file-input-wrapper { margin-bottom: 20px; border: 2px dashed #ccc; padding: 20px; text-align: center; }
-
-        /* --- Main Page Controls --- */
+        
         .controls { background: white; padding: 15px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        .filter-group { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+        .control-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px; }
+        
+        .filter-group { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
         .filter-label { font-weight: bold; margin-right: 10px; }
         .checkbox-wrapper { display: inline-flex; align-items: center; background: #eee; padding: 2px 8px; border-radius: 12px; font-size: 14px; }
         .action-btns { margin-top: 5px; }
         .small-btn { padding: 4px 8px; font-size: 12px; cursor: pointer; }
+        
+        /* Toggle Switch CSS */
+        .toggle-wrapper { display: flex; align-items: center; gap: 10px; font-weight: bold; background: #eef; padding: 5px 10px; border-radius: 8px; }
+        .switch { position: relative; display: inline-block; width: 40px; height: 20px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 20px; }
+        .slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: #2196F3; }
+        input:checked + .slider:before { transform: translateX(20px); }
 
-        /* --- Version Section --- */
         .ver-section { margin-bottom: 30px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
         .ver-header { background: #333; color: white; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; }
         .ver-title { font-size: 1.2em; font-weight: bold; }
         .ver-badges { font-size: 0.9em; display: flex; gap: 5px; }
         .status-badge { padding: 2px 6px; border-radius: 4px; font-weight: bold; color: #333; }
-
-        /* --- Song Grid --- */
         .song-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 15px; }
         .song-box { 
             border: 1px solid #ddd; 
@@ -62,29 +64,25 @@
             transition: transform 0.1s;
         }
         .song-box:hover { transform: scale(1.02); z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-        
         .song-title { font-weight: bold; margin-bottom: 4px; line-height: 1.3; overflow-wrap: break-word; }
         .song-meta { display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto; color: #555; font-size: 0.85em;}
         .tier-label { background: rgba(255,255,255,0.7); padding: 1px 4px; border-radius: 3px; font-size: 10px; border: 1px solid #aaa; }
-        .legg-mark { color: #d00; font-weight: bold; }
-
-        /* Lamp Colors Classes */
+        .type-mark { font-weight: bold; margin-left: 2px; }
+        .mark-l { color: #d00; }
+        .mark-h { color: #d8a000; }
         .lamp-NO_PLAY { background-color: var(--lamp-noplay); }
         .lamp-FAILED { background-color: var(--lamp-failed); }
         .lamp-ASSIST_CLEAR { background-color: var(--lamp-assist); }
         .lamp-EASY_CLEAR { background-color: var(--lamp-easy); }
-        .lamp-CLEAR { background-color: var(--lamp-normal); } /* Normal Clear */
+        .lamp-CLEAR { background-color: var(--lamp-normal); }
         .lamp-HARD_CLEAR { background-color: var(--lamp-hard); color: white; }
         .lamp-EX_HARD_CLEAR { background-color: var(--lamp-exh); }
         .lamp-FULLCOMBO_CLEAR { background-color: var(--lamp-fc); }
-
-        /* Badge Colors */
         .badge-fc { background: var(--lamp-fc); }
         .badge-exh { background: var(--lamp-exh); }
         .badge-hard { background: var(--lamp-hard); color: white; }
         .badge-normal { background: var(--lamp-normal); }
         .badge-easy { background: var(--lamp-easy); }
-
     </style>
 </head>
 <body>
@@ -93,48 +91,48 @@
         <h1>IIDX ☆12 Tier Viewer</h1>
         <div class="input-container">
             <p>GitHub上のマスターデータと、あなたのプレイデータ(CSV)を照合して表示します。</p>
-            
             <div class="file-input-wrapper">
                 <h3>CSVファイルを選択</h3>
                 <input type="file" id="csvFile" accept=".csv">
                 <p><small>※公式e-amusementからダウンロードしたCSV、またはスマホアプリ等から出力したCSV</small></p>
             </div>
-
             <div style="text-align: center; margin: 20px 0;">OR</div>
-
             <div>
                 <h3>テキスト貼り付け (スマホ用)</h3>
                 <textarea id="csvText" placeholder="CSVの中身をここに貼り付けてください..."></textarea>
             </div>
-
             <button class="btn" onclick="processData()">データを読み込んで表示</button>
         </div>
     </div>
 
     <div id="page-main" class="page">
         <div class="controls">
-            <button class="small-btn" onclick="location.reload()">← 戻る</button>
+            <div class="control-row">
+                <button class="small-btn" onclick="location.reload()">← 戻る</button>
+                <div class="toggle-wrapper">
+                    <span>SPL表示: 楽曲初出</span>
+                    <label class="switch">
+                        <input type="checkbox" id="verToggle" onchange="updateDisplay()" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>譜面初出</span>
+                </div>
+            </div>
             <hr>
             <div class="filter-group">
                 <span class="filter-label">表示難易度:</span>
-                <div id="tier-filters">
-                    </div>
+                <div id="tier-filters"></div>
             </div>
             <div class="action-btns">
                 <button class="small-btn" onclick="toggleAllFilters(true)">すべて選択</button>
                 <button class="small-btn" onclick="toggleAllFilters(false)">すべて解除</button>
             </div>
         </div>
-
-        <div id="table-container">
-            </div>
+        <div id="table-container"></div>
     </div>
 
     <script>
-        // --- 設定・定数 ---
-        const MASTER_JSON_URL = './data/master_data.json'; // 同じリポジトリのdataフォルダから読み込む
-        
-        // バージョンIDと名前の対応
+        const MASTER_JSON_URL = './data/master_data.json';
         const VER_NAME = {
             1: "1st&substream", 2: "2nd style", 3: "3rd style", 4: "4th style", 5: "5th style",
             6: "6th style", 7: "7th style", 8: "8th style", 9: "9th style", 10: "10th style",
@@ -145,7 +143,6 @@
             31: "EPOLIS", 32: "Pinky Crush", 33: "Sparkle Shower"
         };
 
-        // クリアランプの優先順位（高い順）
         const LAMP_PRIORITY = {
             "FULLCOMBO CLEAR": 7,
             "EX HARD CLEAR": 6,
@@ -157,33 +154,50 @@
             "NO PLAY": 0
         };
 
-        let masterData = []; // {title, ver, type, tier}
-        let userLamps = {};  // { "曲名": "HARD CLEAR" }
+        const TIER_ORDER = [
+            "地力S+", "個人差S+", "地力S", "個人差S", 
+            "地力A+", "個人差A+", "地力A", "個人差A", 
+            "地力B+", "個人差B+", "地力B", "個人差B", 
+            "地力C", "個人差C", "地力D", "個人差D",
+            "地力E", "個人差E", "地力F", "個人差F"
+        ];
+
+        let masterData = [];
+        let songOriginVer = {}; // 曲の初出バージョンを保持する辞書 { "曲名": verID }
+        let userLamps = {};
         let allTiers = new Set();
         let activeFilters = new Set();
 
-        // --- 初期化 ---
         window.onload = async function() {
             try {
                 const response = await fetch(MASTER_JSON_URL);
                 if (!response.ok) throw new Error("Master data not found");
                 masterData = await response.json();
                 
-                // Tier一覧を作成
+                // データ前処理
                 masterData.forEach(d => {
+                    // Tier収集
                     if(d.tier && d.tier !== '-') allTiers.add(d.tier);
+                    
+                    // 曲初出バージョンの辞書を作成
+                    // ANOTHER譜面のバージョン = その曲の初出バージョンとする
+                    if (d.type === 'ANOTHER') {
+                        songOriginVer[d.title] = d.ver;
+                    }
                 });
-                // ソート順序の定義（地力S+ -> S -> ...）
-                const sortOrder = ["地力S+", "地力S", "地力A+", "地力A", "地力B+", "地力B", "地力C", "地力D", "地力E", "地力F", "個人差S+", "個人差S", "個人差A+", "個人差A", "個人差B+", "個人差B", "個人差C"];
                 
-                // ソートしてフィルタ生成
+                // Tierソートとフィルタ生成
                 const sortedTiers = Array.from(allTiers).sort((a, b) => {
-                    return sortOrder.indexOf(a) - sortOrder.indexOf(b);
+                    let idxA = TIER_ORDER.indexOf(a);
+                    let idxB = TIER_ORDER.indexOf(b);
+                    if (idxA === -1) idxA = 999;
+                    if (idxB === -1) idxB = 999;
+                    return idxA - idxB;
                 });
 
                 const filterContainer = document.getElementById('tier-filters');
                 sortedTiers.forEach(tier => {
-                    activeFilters.add(tier); // 初期は全選択
+                    activeFilters.add(tier);
                     const label = document.createElement('label');
                     label.className = 'checkbox-wrapper';
                     label.innerHTML = `
@@ -193,7 +207,6 @@
                     filterContainer.appendChild(label);
                 });
 
-                // "-" (Tier不明) 用のフィルタ
                 const unknownLabel = document.createElement('label');
                 unknownLabel.className = 'checkbox-wrapper';
                 unknownLabel.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
@@ -205,7 +218,6 @@
             }
         };
 
-        // --- データ処理 ---
         async function processData() {
             const fileInput = document.getElementById('csvFile');
             const textInput = document.getElementById('csvText');
@@ -221,19 +233,14 @@
             }
 
             parseUserCSV(csvContent);
-            
-            // 画面切り替え
             document.getElementById('page-input').classList.remove('active');
             document.getElementById('page-main').classList.add('active');
-            
             updateDisplay();
         }
 
         function readFile(file) {
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
-                // 公式CSVはShift-JISの場合が多いが、スマホアプリ等はUTF-8の場合もある。
-                // ここではとりあえずShift-JISで試みる
                 reader.onload = e => resolve(e.target.result);
                 reader.onerror = e => reject(e);
                 reader.readAsText(file, "Shift_JIS"); 
@@ -242,9 +249,7 @@
 
         function parseUserCSV(text) {
             userLamps = {};
-            // 行ごとに分割
             const rows = text.split(/\r\n|\n/);
-            // ヘッダーを探す（"タイトル"が含まれる行）
             let headerIdx = -1;
             let colMap = {};
 
@@ -256,35 +261,28 @@
                     break;
                 }
             }
-
             if (headerIdx === -1) {
                 alert("有効なCSVヘッダーが見つかりませんでした。");
                 return;
             }
 
-            // データ解析
             for (let i = headerIdx + 1; i < rows.length; i++) {
                 const row = parseCSVLine(rows[i]);
                 if (!row || row.length < 2) continue;
 
                 const title = row[colMap["タイトル"]];
-                // ANOTHERとLEGGENDARIAで列が違う
-                // 公式CSVの仕様: "ANOTHER クリアタイプ", "LEGGENDARIA クリアタイプ"
-                
                 const lampA = row[colMap["ANOTHER クリアタイプ"]];
                 const lampL = row[colMap["LEGGENDARIA クリアタイプ"]];
+                const lampH = row[colMap["HYPER クリアタイプ"]];
 
-                // マップに保存 (キーは "タイトル_TYPE" にするべきだが、
-                // 今回のマスタデータ構造に合わせて検索時に工夫する)
-                // とりあえず曲名に対してランプ情報を保持オブジェクトとして持つ
                 userLamps[title] = {
                     ANOTHER: lampA || "NO PLAY",
-                    LEGGENDARIA: lampL || "NO PLAY"
+                    LEGGENDARIA: lampL || "NO PLAY",
+                    HYPER: lampH || "NO PLAY"
                 };
             }
         }
 
-        // 簡易CSVパーサ（カンマ内のカンマなどを考慮）
         function parseCSVLine(line) {
             const res = [];
             let current = '';
@@ -298,50 +296,67 @@
             return res;
         }
 
-        // --- 描画ロジック ---
         function updateDisplay() {
-            // フィルタ状態更新
             activeFilters.clear();
             document.querySelectorAll('#tier-filters input:checked').forEach(cb => {
                 activeFilters.add(cb.value);
             });
 
+            // トグルの状態取得 (ON = 譜面初出(CSVのver), OFF = 楽曲初出(ANOTHERのver))
+            const showChartVer = document.getElementById('verToggle').checked;
+
             const container = document.getElementById('table-container');
             container.innerHTML = "";
 
-            // バージョンごとにグループ化
-            // まずバージョンリストを作る
             const verGroups = {};
             for(let i=1; i<=33; i++) verGroups[i] = [];
-            verGroups[99] = []; // その他
+            verGroups[99] = [];
 
             masterData.forEach(song => {
-                // フィルタチェック
                 const songTier = song.tier || "-";
                 if (!activeFilters.has(songTier)) return;
 
-                // ユーザーランプ取得
                 let myLamp = "NO PLAY";
                 if (userLamps[song.title]) {
                     if (song.type === "ANOTHER") myLamp = userLamps[song.title].ANOTHER;
                     else if (song.type === "LEGGENDARIA") myLamp = userLamps[song.title].LEGGENDARIA;
+                    else if (song.type === "HYPER") myLamp = userLamps[song.title].HYPER;
                 }
                 
-                verGroups[song.ver].push({ ...song, myLamp: myLamp });
+                // バージョン決定ロジック
+                let targetVer = song.ver; // デフォルトは持っているver (SPAなら曲初出、SPLなら譜面初出になっているはず)
+
+                // もし「楽曲初出」モードで、かつ LEGGENDARIA の場合、
+                // 辞書から曲自体の初出(ANOTHERのver)を引いてきて上書きする
+                if (!showChartVer && song.type === 'LEGGENDARIA') {
+                    const origin = songOriginVer[song.title];
+                    if (origin) {
+                        targetVer = origin;
+                    }
+                }
+
+                if (!verGroups[targetVer]) verGroups[targetVer] = []; // 念のため
+                verGroups[targetVer].push({ ...song, myLamp: myLamp });
             });
 
-            // 表示生成
             Object.keys(verGroups).forEach(verId => {
                 const songs = verGroups[verId];
-                if (songs.length === 0) return; // 対象曲がないバージョンは表示しない
+                if (songs.length === 0) return;
 
-                // バージョンセクション
+                // ソート
+                songs.sort((a, b) => {
+                    let idxA = TIER_ORDER.indexOf(a.tier);
+                    let idxB = TIER_ORDER.indexOf(b.tier);
+                    if (idxA === -1) idxA = 999;
+                    if (idxB === -1) idxB = 999;
+                    if (idxA !== idxB) return idxA - idxB;
+                    return a.title.localeCompare(b.title);
+                });
+
                 const section = document.createElement('div');
                 section.className = 'ver-section';
 
-                // 統計計算 (All Easy, All Hardなど)
                 const badgesHtml = generateBadges(songs);
-
                 const verName = VER_NAME[verId] || `Version ${verId}`;
                 section.innerHTML = `
                     <div class="ver-header">
@@ -353,19 +368,24 @@
 
                 const grid = section.querySelector('.song-grid');
                 songs.forEach(song => {
-                    // ランプのクラス名を正規化 (スペースを_に置換)
                     const lampClass = `lamp-${song.myLamp.replace(/ /g, '_')}`;
-                    const isLegg = song.type === 'LEGGENDARIA';
                     
+                    let typeSuffix = "";
+                    if (song.type === 'LEGGENDARIA') {
+                        typeSuffix = '<span class="type-mark mark-l">[L]</span>';
+                    } else if (song.type === 'HYPER') {
+                        typeSuffix = '<span class="type-mark mark-h">[H]</span>';
+                    }
+
                     const box = document.createElement('div');
                     box.className = `song-box ${lampClass}`;
                     box.innerHTML = `
                         <div class="song-title">
-                            ${song.title} ${isLegg ? '<span class="legg-mark">†</span>' : ''}
+                            ${song.title}${typeSuffix}
                         </div>
                         <div class="song-meta">
                             <span class="tier-label">${song.tier}</span>
-                            </div>
+                        </div>
                     `;
                     grid.appendChild(box);
                 });
@@ -375,43 +395,27 @@
         }
 
         function generateBadges(songs) {
-            // 表示されている曲の中での最低ランプを判定
             let minPriority = 99;
-            let isAllSelected = (activeFilters.size === allTiers.size + 1); // +1は"-"の分
-            
+            let isAllSelected = (activeFilters.size === allTiers.size + 1);
             songs.forEach(s => {
                 const p = LAMP_PRIORITY[s.myLamp] || 0;
                 if (p < minPriority) minPriority = p;
             });
 
-            // 基準
-            // FC(7), EXH(6), HARD(5), CLEAR(4), EASY(3)
             let text = "";
             let cssClass = "";
-
             if (minPriority >= 7) { text = "ALL FC"; cssClass = "badge-fc"; }
             else if (minPriority >= 6) { text = "ALL EXH"; cssClass = "badge-exh"; }
             else if (minPriority >= 5) { text = "ALL HARD"; cssClass = "badge-hard"; }
             else if (minPriority >= 4) { text = "ALL CLEAR"; cssClass = "badge-normal"; }
             else if (minPriority >= 3) { text = "ALL EASY"; cssClass = "badge-easy"; }
-            else { return ""; } // 何も達成していない
+            else { return ""; }
 
-            // フィルタ適用中の表記
             if (!isAllSelected) {
-                // 表示中のTier名を要約して付記するのは長くなるので、
-                // シンプルに (Filtered) か、主要なフィルタなら表示する
-                // ここでは要件に従い (S+, S) のようにしたいが、
-                // 選択数が多いと溢れるため、3つ以上なら (...) にする
                 const selected = Array.from(activeFilters).filter(f => f !== '-');
-                let suffix = "";
-                if (selected.length <= 3) {
-                    suffix = `(${selected.join(',')})`;
-                } else {
-                    suffix = `(Select ${selected.length})`;
-                }
+                let suffix = selected.length <= 3 ? `(${selected.join(',')})` : `(Select ${selected.length})`;
                 text += ` <small>${suffix}</small>`;
             }
-
             return `<span class="status-badge ${cssClass}">${text}</span>`;
         }
 
@@ -420,7 +424,6 @@
             cbs.forEach(cb => cb.checked = enable);
             updateDisplay();
         }
-
     </script>
 </body>
 </html>
