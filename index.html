@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IIDX ☆12 Tier Viewer</title>
     <style>
+        /* --- デザイン設定（塗りつぶし表形式） --- */
         :root {
-            /* 背景色定義 (クリアランプ色) */
             --bg-fc: #ffa500;     /* Orange */
             --bg-exh: #ffd700;    /* Gold */
             --bg-hard: #ff6347;   /* Red */
@@ -15,102 +15,73 @@
             --bg-assist: #ffc0cb; /* Pink */
             --bg-failed: #c0c0c0; /* Gray */
             --bg-noplay: #ffffff; /* White */
-
             --text-dark: #222;
-            --text-light: #fff;
         }
 
-        body { 
-            font-family: sans-serif; 
-            margin: 0; padding: 0; 
-            background: #f4f4f4; 
-            color: #333; 
-        }
-
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
         .page { display: none; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .active { display: block; }
 
         /* 入力画面 */
-        .input-container { 
-            background: white; padding: 30px; border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-            text-align: center; max-width: 600px; margin: 40px auto; 
-        }
+        .input-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; max-width: 600px; margin: 40px auto; }
         textarea { width: 100%; height: 120px; margin-top: 10px; padding: 10px; border: 1px solid #ccc; }
         .btn { background: #333; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 15px; }
         .file-input-wrapper { border: 2px dashed #ccc; padding: 20px; margin-bottom: 20px; }
 
-        /* コントロールバー */
-        .controls { 
-            background: white; padding: 15px; position: sticky; top: 0; z-index: 100; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-bottom: 1px solid #ddd; margin-bottom: 20px;
-        }
-        .control-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .filter-group { display: flex; flex-wrap: wrap; gap: 5px; font-size: 13px; }
+        /* コントロール */
+        .controls { background: white; padding: 15px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+        .filter-group { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; }
         .checkbox-wrapper { cursor: pointer; display: inline-flex; align-items: center; background: #eee; padding: 2px 8px; border-radius: 4px; }
         .checkbox-wrapper:hover { background: #ddd; }
         .checkbox-wrapper input { margin-right: 5px; }
 
-        /* 表レイアウト */
+        /* バージョン枠 */
         .ver-section { margin-bottom: 30px; border: 1px solid #999; background: white; }
-        
-        .ver-header { 
-            background: #333; color: white; padding: 8px 15px; 
-            display: flex; justify-content: space-between; align-items: center;
-        }
+        .ver-header { background: #333; color: white; padding: 8px 15px; display: flex; justify-content: space-between; align-items: center; }
         .ver-title { font-weight: bold; }
-        .ver-badges { font-size: 0.8em; }
-        .status-badge { padding: 2px 6px; border-radius: 2px; font-weight: bold; color: #333; background: #eee; margin-left: 4px;}
+        .status-badge { padding: 2px 6px; border-radius: 2px; font-weight: bold; color: #333; background: #eee; margin-left: 4px; font-size: 0.8em; }
 
-        /* グリッド: 隙間(gap)を1pxにして、背景色(#999)を見せることで罫線にする */
+        /* グリッド (隙間1pxで罫線を表現) */
         .song-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
             gap: 1px; 
             background-color: #999; 
-            border-top: 1px solid #999;
+            border-top: 1px solid #999; 
         }
 
-        /* 各セル */
+        /* 楽曲セル */
         .song-box { 
-            padding: 8px;
-            min-height: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            font-size: 12px;
-            color: var(--text-dark);
+            padding: 8px; min-height: 50px; 
+            display: flex; flex-direction: column; justify-content: space-between; 
+            font-size: 12px; color: var(--text-dark); 
             background: white; /* デフォルト */
         }
-
         .song-title { font-weight: bold; margin-bottom: 4px; line-height: 1.25; }
         .song-meta { display: flex; justify-content: space-between; align-items: flex-end; opacity: 0.8; }
         .tier-label { font-size: 10px; border: 1px solid rgba(0,0,0,0.3); padding: 0 4px; border-radius: 2px; background: rgba(255,255,255,0.5); }
         
-        .type-mark { font-weight: bold; font-size: 0.9em; margin-left: 2px; }
-        .mark-l { color: #d00; } 
-        .mark-h { color: #a67c00; }
+        .mark-l { color: #d00; font-weight: bold; margin-left:2px; } 
+        .mark-h { color: #a67c00; font-weight: bold; margin-left:2px; }
 
-        /* 背景色クラス */
+        /* ランプ背景色 */
         .lamp-FULLCOMBO_CLEAR { background-color: var(--bg-fc); }
         .lamp-EX_HARD_CLEAR   { background-color: var(--bg-exh); }
         .lamp-HARD_CLEAR      { background-color: var(--bg-hard); color: white; }
         .lamp-HARD_CLEAR .mark-l { color: #ffcccc; }
         .lamp-HARD_CLEAR .mark-h { color: #ffffcc; }
-
         .lamp-CLEAR           { background-color: var(--bg-clear); }
         .lamp-EASY_CLEAR      { background-color: var(--bg-easy); }
         .lamp-ASSIST_CLEAR    { background-color: var(--bg-assist); }
         .lamp-FAILED          { background-color: var(--bg-failed); color: white; }
         .lamp-NO_PLAY         { background-color: var(--bg-noplay); }
 
-        /* バッジ用背景 */
+        /* バッジ色 */
         .badge-fc { background: var(--bg-fc); }
         .badge-exh { background: var(--bg-exh); }
         .badge-hard { background: var(--bg-hard); color: white; }
         .badge-normal { background: var(--bg-clear); }
         .badge-easy { background: var(--bg-easy); }
-
     </style>
 </head>
 <body>
@@ -118,31 +89,24 @@
     <div id="page-input" class="page active">
         <h1>IIDX ☆12 Tier Viewer</h1>
         <div class="input-container">
-            <p>Github上のマスターデータと、CSVを照合して表示します。</p>
             <div class="file-input-wrapper">
                 <h3>CSVファイルを選択</h3>
                 <input type="file" id="csvFile" accept=".csv">
-                <p style="font-size:0.8em; color:#666;">※e-amusement公式またはアプリから出力したCSV</p>
             </div>
-            <div style="margin: 15px 0;">- OR -</div>
-            <div>
-                <textarea id="csvText" placeholder="ここにCSVの中身を貼り付け (スマホ用)"></textarea>
-            </div>
+            <div>- OR -</div>
+            <textarea id="csvText" placeholder="CSV貼り付け (スマホ用)"></textarea>
             <button class="btn" onclick="processData()">読み込んで表示</button>
         </div>
     </div>
 
     <div id="page-main" class="page">
         <div class="controls">
-            <div class="control-row">
-                <button onclick="location.reload()" style="cursor:pointer;">← 戻る</button>
-                <div></div>
-            </div>
+            <button onclick="location.reload()" style="cursor:pointer; margin-bottom:10px;">← 戻る</button>
             <div class="filter-group">
                 <span style="font-weight:bold;">Tier:</span>
-                <div id="tier-filters" style="display:inline-flex; flex-wrap:wrap; gap:5px;"></div>
+                <div id="tier-filters"></div>
             </div>
-            <div style="margin-top:5px;">
+            <div style="margin-top:10px;">
                 <button onclick="toggleAllFilters(true)">全選択</button>
                 <button onclick="toggleAllFilters(false)">全解除</button>
             </div>
@@ -151,6 +115,7 @@
     </div>
 
     <script>
+        // 設定
         const MASTER_JSON_URL = './data/master_data.json';
         const VER_NAME = {
             1: "1st&substream", 2: "2nd style", 3: "3rd style", 4: "4th style", 5: "5th style",
@@ -161,95 +126,69 @@
             26: "Rootage", 27: "HEROIC VERSE", 28: "BISTROVER", 29: "CastHour", 30: "RESIDENT",
             31: "EPOLIS", 32: "Pinky Crush", 33: "Sparkle Shower"
         };
-
         const LAMP_PRIORITY = {
-            "FULLCOMBO CLEAR": 7,
-            "EX HARD CLEAR": 6,
-            "HARD CLEAR": 5,
-            "CLEAR": 4,
-            "EASY CLEAR": 3,
-            "ASSIST CLEAR": 2,
-            "FAILED": 1,
-            "NO PLAY": 0
+            "FULLCOMBO CLEAR": 7, "EX HARD CLEAR": 6, "HARD CLEAR": 5,
+            "CLEAR": 4, "EASY CLEAR": 3, "ASSIST CLEAR": 2, "FAILED": 1, "NO PLAY": 0
         };
 
-        // この順序リストを使って確実にチェックボックスを生成します
-        const TIER_ORDER = [
-            "地力S+", "個人差S+", "地力S", "個人差S", 
-            "地力A+", "個人差A+", "地力A", "個人差A", 
-            "地力B+", "個人差B+", "地力B", "個人差B", 
-            "地力C", "個人差C", "地力D", "個人差D",
-            "地力E", "個人差E", "地力F", "個人差F"
-        ];
-
+        // グローバル変数
         let masterData = [];
         let userLamps = {};
-        let availableTiers = new Set();
 
+        // 初期化: JSON読み込みとチェックボックス生成のみ行う
         window.onload = async function() {
             try {
-                const response = await fetch(MASTER_JSON_URL);
-                if (!response.ok) throw new Error("Master data not found");
-                masterData = await response.json();
+                const res = await fetch(MASTER_JSON_URL);
+                if (!res.ok) throw new Error("JSON読み込み失敗");
+                masterData = await res.json();
                 
-                // データに含まれるTierを収集
+                // Tier一覧を取得 (出現順)
+                const tierSet = new Set();
                 masterData.forEach(d => {
-                    const t = d.tier || "-";
-                    availableTiers.add(t);
+                    if (d.tier && d.tier !== '-') tierSet.add(d.tier);
                 });
 
-                initFilters();
+                // フィルタ生成
+                const container = document.getElementById('tier-filters');
+                tierSet.forEach(tier => {
+                    const label = document.createElement('label');
+                    label.className = 'checkbox-wrapper';
+                    label.innerHTML = `<input type="checkbox" value="${tier}" checked onchange="updateDisplay()"> ${tier}`;
+                    container.appendChild(label);
+                });
+                // その他
+                const label = document.createElement('label');
+                label.className = 'checkbox-wrapper';
+                label.innerHTML = `<input type="checkbox" value="-" checked onchange="updateDisplay()"> その他`;
+                container.appendChild(label);
 
             } catch (e) {
-                alert("マスターデータの読み込みに失敗しました。\n" + e);
+                alert("初期化エラー: " + e);
             }
         };
 
-        function initFilters() {
-            const filterContainer = document.getElementById('tier-filters');
-            filterContainer.innerHTML = "";
-
-            // 定義順に生成 (データにあるものだけ)
-            TIER_ORDER.forEach(tier => {
-                if (availableTiers.has(tier)) {
-                    createCheckbox(filterContainer, tier);
-                    availableTiers.delete(tier);
-                }
-            });
-            // 定義外のTierがあれば末尾に追加
-            availableTiers.forEach(tier => {
-                createCheckbox(filterContainer, tier);
-            });
-        }
-
-        function createCheckbox(container, val) {
-            const label = document.createElement('label');
-            label.className = 'checkbox-wrapper';
-            label.innerHTML = `<input type="checkbox" value="${val}" checked onchange="updateDisplay()"> ${val}`;
-            container.appendChild(label);
-        }
-
+        // CSV読み込み処理
         async function processData() {
             const fileInput = document.getElementById('csvFile');
             const textInput = document.getElementById('csvText');
-            let csvContent = "";
+            let content = "";
 
             if (fileInput.files.length > 0) {
-                csvContent = await readFile(fileInput.files[0]);
-            } else if (textInput.value.trim() !== "") {
-                csvContent = textInput.value;
+                content = await readFile(fileInput.files[0]);
+            } else if (textInput.value.trim()) {
+                content = textInput.value;
             } else {
-                alert("CSVファイルを選択するか、テキストを貼り付けてください。");
+                alert("CSVを選択してください");
                 return;
             }
+
             try {
-                parseUserCSV(csvContent);
+                parseUserCSV(content);
                 document.getElementById('page-input').classList.remove('active');
                 document.getElementById('page-main').classList.add('active');
                 updateDisplay();
-            } catch(e) {
-                alert("エラー: " + e);
-                console.error(e);
+            } catch (e) {
+                alert("CSV解析エラー: " + e);
             }
         }
 
@@ -258,119 +197,124 @@
                 const reader = new FileReader();
                 reader.onload = e => resolve(e.target.result);
                 reader.onerror = e => reject(e);
-                reader.readAsText(file, "Shift_JIS"); 
+                reader.readAsText(file, "Shift_JIS");
             });
         }
 
+        // CSVパース (シンプル版)
         function parseUserCSV(text) {
             userLamps = {};
             const rows = text.split(/\r\n|\n/);
-            let headerIdx = -1;
-            let colMap = {};
-            
-            for(let i=0; i<rows.length; i++) {
+            let headerIdx = -1, colMap = {};
+
+            // ヘッダー検索
+            for (let i = 0; i < rows.length; i++) {
                 if (rows[i].includes("タイトル")) {
                     headerIdx = i;
-                    const cols = rows[i].split(",");
-                    cols.forEach((c, idx) => colMap[c.trim()] = idx);
+                    rows[i].split(",").forEach((c, idx) => colMap[c.trim()] = idx);
                     break;
                 }
             }
-            if (headerIdx === -1) throw new Error("CSVヘッダーが見つかりません");
+            if (headerIdx === -1) throw new Error("ヘッダーが見つかりません");
 
+            // データ読み込み
             for (let i = headerIdx + 1; i < rows.length; i++) {
-                const row = parseCSVLine(rows[i]);
+                // 簡易split (引用符内のカンマは無視しない簡易実装だが、曲名には通常カンマはないため動作する)
+                // もし厳密さが必要なら以前のparseCSVLineを使うが、ここでは安定重視で簡易splitにする
+                // ※曲名にカンマがある場合は以前の関数が必要。念のため以前の関数を使います。
+                const row = parseCSVLine(rows[i]); 
                 if (!row || row.length < 2) continue;
-                const title = row[colMap["タイトル"]];
                 
-                userLamps[title] = {
-                    ANOTHER: colMap["ANOTHER クリアタイプ"] ? row[colMap["ANOTHER クリアタイプ"]] : "NO PLAY",
-                    LEGGENDARIA: colMap["LEGGENDARIA クリアタイプ"] ? row[colMap["LEGGENDARIA クリアタイプ"]] : "NO PLAY",
-                    HYPER: colMap["HYPER クリアタイプ"] ? row[colMap["HYPER クリアタイプ"]] : "NO PLAY"
-                };
+                const title = row[colMap["タイトル"]];
+                if (title) {
+                    userLamps[title] = {
+                        ANOTHER: row[colMap["ANOTHER クリアタイプ"]] || "NO PLAY",
+                        LEGGENDARIA: row[colMap["LEGGENDARIA クリアタイプ"]] || "NO PLAY",
+                        HYPER: row[colMap["HYPER クリアタイプ"]] || "NO PLAY"
+                    };
+                }
             }
         }
 
         function parseCSVLine(line) {
             const res = [];
-            let current = '';
-            let inQuote = false;
+            let current = '', inQuote = false;
             for(let char of line) {
-                if(char === '"') { inQuote = !inQuote; }
+                if(char === '"') inQuote = !inQuote;
                 else if(char === ',' && !inQuote) { res.push(current); current = ''; }
-                else { current += char; }
+                else current += char;
             }
             res.push(current);
             return res;
         }
 
+        // 描画処理
         function updateDisplay() {
-            const checkedBoxes = document.querySelectorAll('#tier-filters input:checked');
             const activeFilters = new Set();
-            checkedBoxes.forEach(cb => activeFilters.add(cb.value));
-
+            document.querySelectorAll('#tier-filters input:checked').forEach(cb => activeFilters.add(cb.value));
+            
             const container = document.getElementById('table-container');
             container.innerHTML = "";
 
+            // データをバージョンごとにまとめる
             const verGroups = {};
-            for(let i=1; i<=33; i++) verGroups[i] = [];
-            verGroups[99] = [];
 
             masterData.forEach(song => {
-                const songTier = song.tier || "-";
-                if (!activeFilters.has(songTier)) return;
+                const tier = song.tier || "-";
+                if (!activeFilters.has(tier)) return;
 
+                // ランプ情報の取得
                 let myLamp = "NO PLAY";
                 if (userLamps[song.title]) {
                     if (song.type === "ANOTHER") myLamp = userLamps[song.title].ANOTHER;
                     else if (song.type === "LEGGENDARIA") myLamp = userLamps[song.title].LEGGENDARIA;
                     else if (song.type === "HYPER") myLamp = userLamps[song.title].HYPER;
                 }
-                if (!myLamp) myLamp = "NO PLAY";
-
-                // バージョン取得の安全策: 新旧どのJSONでも動作するように
-                // ver_song (曲初出) > ver (旧形式) > ver_chart (譜面初出) の優先度で取得
-                // ※トグル廃止に伴い「曲のバージョン」を優先して表示します
-                let currentVer = song.ver_song || song.ver || song.ver_chart || 99;
                 
-                if (!verGroups[currentVer]) verGroups[currentVer] = [];
-                verGroups[currentVer].push({ ...song, myLamp: myLamp });
+                // バージョン判定 (一番単純なロジック: verがあればver、なければver_song)
+                // これにより新旧どちらのJSONでも動く
+                const v = song.ver || song.ver_song || 99;
+
+                if (!verGroups[v]) verGroups[v] = [];
+                verGroups[v].push({ ...song, myLamp: myLamp });
             });
 
+            // バージョン順に表示
             Object.keys(verGroups).sort((a,b) => Number(a) - Number(b)).forEach(verId => {
                 const songs = verGroups[verId];
                 if (songs.length === 0) return;
 
-                // タイトル順にソート (安全策)
+                // タイトル順ソート
                 songs.sort((a, b) => a.title.localeCompare(b.title));
 
+                // HTML生成
                 const section = document.createElement('div');
                 section.className = 'ver-section';
                 
-                const badgesHtml = generateBadges(songs, activeFilters);
+                const badges = generateBadges(songs);
+                const vName = VER_NAME[verId] || `Ver.${verId}`;
 
                 section.innerHTML = `
                     <div class="ver-header">
-                        <span class="ver-title">${VER_NAME[verId] || 'Version '+verId}</span>
-                        <div class="ver-badges">${badgesHtml}</div>
+                        <span class="ver-title">${vName}</span>
+                        <div>${badges}</div>
                     </div>
                     <div class="song-grid"></div>
                 `;
                 
                 const grid = section.querySelector('.song-grid');
-                songs.forEach(song => {
-                    const lampClean = (song.myLamp).replace(/ /g, '_');
-                    
-                    let typeSuffix = "";
-                    if (song.type === 'LEGGENDARIA') typeSuffix = '<span class="type-mark mark-l">L</span>';
-                    else if (song.type === 'HYPER') typeSuffix = '<span class="type-mark mark-h">H</span>';
+                songs.forEach(s => {
+                    const lampClean = s.myLamp.replace(/ /g, '_');
+                    let suffix = "";
+                    if (s.type === 'LEGGENDARIA') suffix = '<span class="mark-l">L</span>';
+                    if (s.type === 'HYPER') suffix = '<span class="mark-h">H</span>';
 
                     const box = document.createElement('div');
                     box.className = `song-box lamp-${lampClean}`;
                     box.innerHTML = `
-                        <div class="song-title">${song.title}${typeSuffix}</div>
+                        <div class="song-title">${s.title}${suffix}</div>
                         <div class="song-meta">
-                            <span class="tier-label">${song.tier || "-"}</span>
+                            <span class="tier-label">${s.tier || "-"}</span>
                         </div>
                     `;
                     grid.appendChild(box);
@@ -379,31 +323,22 @@
             });
         }
 
-        function generateBadges(songs, activeFilters) {
-            if (songs.length === 0) return "";
-            
-            let minPriority = 99;
+        function generateBadges(songs) {
+            let minP = 99;
             songs.forEach(s => {
                 const p = LAMP_PRIORITY[s.myLamp] !== undefined ? LAMP_PRIORITY[s.myLamp] : 0;
-                if (p < minPriority) minPriority = p;
+                if (p < minP) minP = p;
             });
-
-            let text = "", cssClass = "";
-            if (minPriority >= 7) { text = "FC"; cssClass = "badge-fc"; }
-            else if (minPriority >= 6) { text = "EXH"; cssClass = "badge-exh"; }
-            else if (minPriority >= 5) { text = "HARD"; cssClass = "badge-hard"; }
-            else if (minPriority >= 4) { text = "CLEAR"; cssClass = "badge-normal"; }
-            else if (minPriority >= 3) { text = "EASY"; cssClass = "badge-easy"; }
+            
+            let txt="", cls="";
+            if(minP>=7){ txt="FC"; cls="badge-fc"; }
+            else if(minP>=6){ txt="EXH"; cls="badge-exh"; }
+            else if(minP>=5){ txt="HARD"; cls="badge-hard"; }
+            else if(minP>=4){ txt="CLEAR"; cls="badge-normal"; }
+            else if(minP>=3){ txt="EASY"; cls="badge-easy"; }
             else return "";
 
-            const allBoxes = document.querySelectorAll('#tier-filters input');
-            if (activeFilters.size < allBoxes.length) {
-                const selected = Array.from(activeFilters).filter(f => f !== '-');
-                if(selected.length > 0) {
-                   text += selected.length <= 3 ? ` (${selected.join(',')})` : ` (${selected.length})`;
-                }
-            }
-            return `<span class="status-badge ${cssClass}">${text}</span>`;
+            return `<span class="status-badge ${cls}">${txt}</span>`;
         }
 
         function toggleAllFilters(enable) {
