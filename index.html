@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IIDX ☆12 Tier Viewer</title>
+    <title>IIDX ☆12 バージョン毎クリアランプ</title>
     <style>
         /* --- デザイン設定 --- */
         :root {
@@ -106,13 +106,13 @@
     <div id="page-input" class="page active">
         <h1>IIDX ☆12 Tier Viewer</h1>
         <div class="input-container">
-            <p>公式サイトのCSVデータを読み込んで、Tier表にランプ状況を反映させます。</p>
+            <p>公式サイトのCSVデータを読み込んで、ランプ状況を反映します。</p>
             <div class="file-input-wrapper">
                 <h3>CSVファイルを選択</h3>
                 <input type="file" id="csvFile" accept=".csv">
             </div>
             <div>- または -</div>
-            <textarea id="csvText" placeholder="ここにCSVの中身を直接貼り付けることもできます"></textarea>
+            <textarea id="csvText" placeholder="ここにテキストを貼り付けることもできます"></textarea>
             <button class="btn" onclick="processData()">読み込んで表示</button>
         </div>
     </div>
@@ -431,3 +431,4 @@
     </script>
 </body>
 </html>
+
